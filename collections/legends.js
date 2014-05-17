@@ -1,0 +1,1 @@
+Legends = new Meteor.Collection('legends');

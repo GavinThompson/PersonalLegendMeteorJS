@@ -9,8 +9,8 @@
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.2",
-        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -19,8 +19,13 @@
       },
       "accounts-ui-bootstrap-dropdown": {
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.6.5.1",
-        "commit": "c8b29d2e7f8611d6dec9d6d23c1c2b94e000b0fb"
+        "tag": "v0.8.3",
+        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }

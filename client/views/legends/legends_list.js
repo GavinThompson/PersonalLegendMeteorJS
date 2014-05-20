@@ -1,5 +1,5 @@
 Template.legendsList.helpers({ 
 	legends: function() {
-		return Legends.find();
+		return Legends.find({}, {sort: {submitted: -1}});
 	}
 });

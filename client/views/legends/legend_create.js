@@ -9,7 +9,6 @@ Template.legendCreate.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 	
-		// Meteor.call('post', post, function(error, id) { if (error)
 		Meteor.call('post', legend, function(error, id) {
 
 			if(error){
@@ -26,5 +25,5 @@ Template.legendCreate.events({
 			}
 		});
 
-		    	}
+	}
 });

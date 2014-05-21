@@ -1,5 +1,10 @@
 Legends = new Meteor.Collection('legends');
 
+Legends.allow({
+  update: ownsDocument,
+  remove: ownsDocument
+});
+
 Meteor.methods({
 	post: function(legendAttributes) {
 		var user = Meteor.user(),

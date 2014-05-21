@@ -15,9 +15,9 @@ Template.legendCreate.events({
 			if(error){
 				return alert(error.reason);
 			}
+		});
 
 		    
-		    Router.go('legendPage', {_id: id});
-		});
+	    Router.go('legendsList');
 	}
 });

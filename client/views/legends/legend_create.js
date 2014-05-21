@@ -13,11 +13,18 @@ Template.legendCreate.events({
 		Meteor.call('post', legend, function(error, id) {
 
 			if(error){
-				return alert(error.reason);
+				// display the error to the user
+				throwError(error.reason);
+
+				if (error.error === 302){
+					Router.go('legendPage', {_id: error.details})
+				}
+				// 
+			}else{
+				// else go to page
+				Router.go('legendPage', {_id: id});
 			}
 		});
 
-		    
-	    Router.go('legendsList');
-	}
+		    	}
 });

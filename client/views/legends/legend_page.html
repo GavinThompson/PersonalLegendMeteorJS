@@ -1,3 +1,10 @@
 <template name="legendPage">
-  {{> legendItem}}
+  	{{> legendItem}}
+
+	<ul class="comments">
+		{{#each comments}}
+	  		{{> comment}}
+		{{/each}}
+	</ul>
+
 </template>

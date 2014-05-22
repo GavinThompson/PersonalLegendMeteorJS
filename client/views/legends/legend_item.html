@@ -1,14 +1,18 @@
 <template name="legendItem">
+
   	<div class="legend">
-    	<div class="legend-content">
-      		<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-      		<p>
-      			submitted by {{author}}
-      			{{#if ownLegend}}<a href="{{pathFor 'legendEdit'}}">Edit</a>{{/if}}
-      		</p>
-		</div>
 
+        <div class="legend-content">
+      		  <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      		  <p>
+      			    submitted by {{author}}
+                <a href="{{pathFor 'legendPage'}}">{{commentsCount}} comments</a>
+      			    {{#if ownLegend}}<a href="{{pathFor 'legendEdit'}}">Edit</a>{{/if}}
+      		  </p>
+   		  </div>
 
-    	<a href="{{pathFor 'legendPage'}}" class="discuss btn">Discuss</a>
+    	  <a href="{{pathFor 'legendPage'}}" class="discuss btn">Discuss</a>
+
   	</div>
+
 </template>

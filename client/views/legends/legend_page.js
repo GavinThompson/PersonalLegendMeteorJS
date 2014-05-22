@@ -1,5 +1,5 @@
 Template.legendPage.helpers({ 
 	comments: function() {
-		return Comments.find({postId: this._id});
+		return Comments.find({legendId: this._id});
 	}
 });

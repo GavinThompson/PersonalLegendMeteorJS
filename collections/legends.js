@@ -13,7 +13,7 @@ Legends.deny({
 });
 
 Meteor.methods({
-	post: function(legendAttributes) {
+	legend: function(legendAttributes) {
 		var user = Meteor.user(),
 			legendWithSameLink = Legends.findOne({url: legendAttributes.url});
 

@@ -9,7 +9,7 @@ Template.legendCreate.events({
 			message: $(e.target).find('[name=message]').val()
 		}
 	
-		Meteor.call('post', legend, function(error, id) {
+		Meteor.call('legend', legend, function(error, id) {
 
 			if(error){
 				// display the error to the user
@@ -24,6 +24,6 @@ Template.legendCreate.events({
 				Router.go('legendPage', {_id: id});
 			}
 		});
-
 	}
+	
 });

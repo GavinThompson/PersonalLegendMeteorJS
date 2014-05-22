@@ -24,6 +24,9 @@ Meteor.methods({
 			submitted: new Date().getTime()
 		});
 
+		// update the post with the number of comments
+		Legends.update(comment.legendId, {$inc: {commentsCount: 1}});
+
 		return Comments.insert(comment); 
 
 	}

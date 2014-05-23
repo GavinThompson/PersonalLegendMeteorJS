@@ -1,4 +1,4 @@
-Template.comment.helpers({ 
+Template.datemarker.helpers({ 
 	submittedText: function() {
 		return new Date(this.submitted).toString(); 
 	}

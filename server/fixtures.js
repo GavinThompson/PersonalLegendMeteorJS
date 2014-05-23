@@ -21,10 +21,10 @@ if (Legends.find().count() === 0) {
 		author: sacha.profile.name,
 		url: 'http://sachagreif.com/introducing-telescope/', 
 		submitted: now - 7 * 3600 * 1000,
-		commentsCount: 2
+		datemarkersCount: 2
 	});
 
-	Comments.insert({
+	Datemarkers.insert({
 		legendId: telescopeId,
 		userId: tom._id,
 		author: tom.profile.name,
@@ -32,7 +32,7 @@ if (Legends.find().count() === 0) {
 		body: 'Interesting project Sacha, can I get involved?'
 	});
 	
-	Comments.insert({
+	Datemarkers.insert({
 		legendId: telescopeId,
 		userId: sacha._id,
 		author: sacha.profile.name, submitted: now - 3 * 3600 * 1000, 
@@ -45,7 +45,7 @@ if (Legends.find().count() === 0) {
 		author: tom.profile.name,
 		url: 'http://meteor.com',
 		submitted: now - 10 * 3600 * 1000,
-		commentsCount: 0
+		datemarkersCount: 0
 	});
 
 	Legends.insert({
@@ -54,7 +54,7 @@ if (Legends.find().count() === 0) {
 		author: tom.profile.name,
 		url: 'http://themeteorbook.com', 
 		submitted: now - 12 * 3600 * 1000,
-		commentsCount: 0
+		datemarkersCount: 0
 	}); 
 }
 

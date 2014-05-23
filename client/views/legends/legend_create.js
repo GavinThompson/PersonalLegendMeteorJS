@@ -4,9 +4,8 @@ Template.legendCreate.events({
 	    e.preventDefault();
 
 		var legend = {
-			url: $(e.target).find('[name=url]').val(),
 			title: $(e.target).find('[name=title]').val(), 
-			message: $(e.target).find('[name=message]').val()
+			synopsis: $(e.target).find('[name=synopsis]').val()
 		}
 	
 		Meteor.call('legend', legend, function(error, id) {

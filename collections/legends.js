@@ -6,16 +6,15 @@ Legends.allow({
 });
 
 Legends.deny({
-	update: function(userId, post, fieldNames) {
+	update: function(userId, legend, fieldNames) {
 	    // may only edit the following two fields:
-		return (_.without(fieldNames, 'url', 'title').length > 0); 
+		return (_.without(fieldNames, 'title', 'synopsis').length > 0); 
 	}
 });
 
 Meteor.methods({
 	legend: function(legendAttributes) {
-		var user = Meteor.user(),
-			legendWithSameLink = Legends.findOne({url: legendAttributes.url});
+		var user = Meteor.user();
 
     	// ensure the user is logged in
 		if (!user){
@@ -26,18 +25,16 @@ Meteor.methods({
 			throw new Meteor.Error(422, 'Please fill in a title');
 		}
 
-	    // check that there are no previous posts with the same link
-		if (legendAttributes.url && legendWithSameLink) { 
-			throw new Meteor.Error(
-				302, 
-				'This link has already been used', 
-				legendWithSameLink._id
-			);
-    	}
+	    // ensure there is a quick synopsis
+		if (!legendAttributes.synopsis){
+			throw new Meteor.Error(422, 'Please fill in a quick synopsis to summarize your story.');
+		}
+
 
 	    // pick out the whitelisted keys
-		var legend = _.extend(_.pick(legendAttributes, 'url', 'title', 'message'), {
+		var legend = _.extend(_.pick(legendAttributes, 'title', 'synopsis'), {
 			title: legendAttributes.title + (this.isSimulation ? '(client)' : '(server)'), 
+			synopsis: legendAttributes.synopsis + (this.isSimulation ? '(client)' : '(server)'), 
 			userId: user._id,
 			author: user.username,
 			submitted: new Date().getTime(),

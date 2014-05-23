@@ -1,16 +1,16 @@
 <template name="legendPage">
   	{{> legendItem}}
 
-	<ul class="comments">
-		{{#each comments}}
-	  		{{> comment}}
+	<ul class="datemarkers">
+		{{#each datemarkers}}
+	  		{{> datemarker}}
 		{{/each}}
 	</ul>
 
 	{{#if currentUser}}
-		{{> commentSubmit}}
+		{{> datemarkerSubmit}}
 	{{else}}
-		<p>Please log in to leave a comment.</p>
+		<p>Please log in to leave a datemarker.</p>
 	{{/if}}
 
 </template>

@@ -1,10 +1,13 @@
 Template.legendEdit.events({ 
 	'submit form': function(e) {
+	    
 	    e.preventDefault();
+		
 		var currentLegendId = this._id;
+		
 		var legendProperties = {
-			url: $(e.target).find('[name=url]').val(),
-			title: $(e.target).find('[name=title]').val()
+			title: $(e.target).find('[name=title]').val(),
+			synopsis: $(e.target).find('[name=synopsis]').val()
 		}
 		
 		Legends.update(currentLegendId, {$set: legendProperties}, function(error) { 

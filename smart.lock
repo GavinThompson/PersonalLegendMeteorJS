@@ -4,7 +4,8 @@
     "basePackages": {
       "iron-router": {},
       "spin": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "accounts-ui-bootstrap-dropdown": {},
+      "glDatePicker": {}
     },
     "packages": {
       "iron-router": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
         "tag": "v0.8.3",
         "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
+      },
+      "glDatePicker": {
+        "git": "https://github.com/properapp/glDatePicker.git",
+        "tag": "v0.1.0",
+        "commit": "16c95d1f939fe35ebb7ede245f0fbfd57e38df9f"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -1,9 +1,13 @@
-.grid-block, .main, .legend, .comments li, .comment-form {
+.grid-block, .main, .legend, .datemarkers li, .datemarker-form {
 	background: #fff;
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.datemarker-form {
+	background: ghostwhite;
 }
 
 body{
@@ -72,25 +76,25 @@ body{
   display: block; float: right; margin-top: 7px;
 }
 
-.comments {
+.datemarkers {
   list-style-type: none;
   margin: 0; 
 }
 
-.comments li h4 {
+.datemarkers li h4 {
   font-size: 16px; margin: 0;
 }
 
-.comments li h4 .date {
+.datemarkers li h4 .date {
   font-size: 12px;
   font-weight: normal; 
 }
 
-.comments li h4 a {
+.datemarkers li h4 a {
   font-size: 12px 
 }
 
-.comments li p:last-child {
+.datemarkers li p:last-child {
   margin-bottom: 0 
 }
 

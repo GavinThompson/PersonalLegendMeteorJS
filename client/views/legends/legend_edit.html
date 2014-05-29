@@ -35,4 +35,14 @@
 		</div>
     	
   	</form>
+
+    
+
+    {{#if currentUser}}
+        {{> datemarkerCreate}}
+    {{else}}
+        <p>Please log in to leave a datemarker.</p>
+    {{/if}}
+
+
 </template>

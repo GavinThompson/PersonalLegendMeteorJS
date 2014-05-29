@@ -1,0 +1,43 @@
+<template name="datemarkerCreate">
+
+    <h2>Add a new TESTDateMarker Event</h2>
+ 	<form name="datemarker" class="datemarker-form">
+ 		
+        <div class="control-group">
+            <div class="controls">
+                <label for="subtitle">Title of this marker</label>
+                <input name="subtitle" type="text" value="" placeholder="Title this datemarker">
+
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <div class="controls">
+                <label for="dateSpan">Pick a date for this event</label>
+                <input type="date" name="dateSpan" class="datepicker">
+            </div>
+        </div>
+
+    	<div class="control-group">
+        	<div class="controls">
+            	<label for="body">datemarker on this post</label>
+            	<textarea name="body"></textarea>
+        	</div>
+    	</div>
+
+        <div class="control-group">
+            <div class="controls">
+                <label for="dateSpan">Select a background colour for this object:</label>
+                <input type="color" name="backgroundColour">
+            </div>
+        </div>
+    	
+    	<div class="control-group">
+        	<div class="controls">
+            	<button type="submit" class="btn">Add datemarker</button>
+        	</div>
+    	</div>
+  	
+  	</form>
+</template>

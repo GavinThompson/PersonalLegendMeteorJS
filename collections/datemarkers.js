@@ -21,12 +21,26 @@ Meteor.methods({
 
 		datemarker = _.extend(_.pick(datemarkerAttributes, 'legendId', 'body'), { 
 			userId: user._id,
-			author: user.username,
+			subtitle: datemarkerAttributes.subtitle + (this.isSimulation ? '(client)' : '(server)'), 
+			body: datemarkerAttributes.body + (this.isSimulation ? '(client)' : '(server)'), 
+			dateSpan: datemarkerAttributes.dateSpan + (this.isSimulation ? '(client)' : '(server)'), 
+			backgroundColour: datemarkerAttributes.backgroundColour + (this.isSimulation ? '(client)' : '(server)'), 
 			submitted: new Date().getTime()
 		});
 
 		// update the post with the number of datemarkers
 		Legends.update(datemarker.legendId, {$inc: {datemarkersCount: 1}});
+
+
+		// wait for 5 seconds
+			if (! this.isSimulation) {
+				var Future = Npm.require('fibers/future'); 
+				var future = new Future(); 
+				Meteor.setTimeout(function() {
+					future.return(); 
+				}, 5 * 1000); 
+				future.wait();
+			}
 
 		return Datemarkers.insert(datemarker); 
 

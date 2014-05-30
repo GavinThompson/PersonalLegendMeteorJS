@@ -33,8 +33,8 @@ Meteor.methods({
 
 	    // pick out the whitelisted keys
 		var legend = _.extend(_.pick(legendAttributes, 'title', 'synopsis'), {
-			title: legendAttributes.title + (this.isSimulation ? '(client)' : '(server)'), 
-			synopsis: legendAttributes.synopsis + (this.isSimulation ? '(client)' : '(server)'), 
+			title: legendAttributes.title,
+			synopsis: legendAttributes.synopsis,
 			userId: user._id,
 			author: user.username,
 			submitted: new Date().getTime(),

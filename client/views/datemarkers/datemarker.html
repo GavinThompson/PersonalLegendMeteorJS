@@ -1,12 +1,13 @@
 <template name="datemarker">
-  	<li>
+  	<div class="datemarker" id="marker{{indexInc}}">
   		
     	<h4>
-      		<span class="author">{{author}}</span>
-      		<span class="date">on {{submittedText}}</span>
+      		<span class="author">{{subtitle}}</span>
+      		<span class="date">on {{dateSpan}}</span>
 		</h4>
+		<div style="background-color:{{backgroundColour}} ;">
+	    	<p>{{body}}</p>
+	    </div>
 
-    	<p>{{body}}</p>
-
-  	</li>
+  	</div>
 </template>

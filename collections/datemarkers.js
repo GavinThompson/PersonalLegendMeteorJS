@@ -21,10 +21,10 @@ Meteor.methods({
 
 		datemarker = _.extend(_.pick(datemarkerAttributes, 'legendId', 'body'), { 
 			userId: user._id,
-			subtitle: datemarkerAttributes.subtitle + (this.isSimulation ? '(client)' : '(server)'), 
-			body: datemarkerAttributes.body + (this.isSimulation ? '(client)' : '(server)'), 
-			dateSpan: datemarkerAttributes.dateSpan + (this.isSimulation ? '(client)' : '(server)'), 
-			backgroundColour: datemarkerAttributes.backgroundColour + (this.isSimulation ? '(client)' : '(server)'), 
+			subtitle: datemarkerAttributes.subtitle,
+			body: datemarkerAttributes.body,
+			dateSpan: datemarkerAttributes.dateSpan,
+			backgroundColour: datemarkerAttributes.backgroundColour,
 			submitted: new Date().getTime()
 		});
 

@@ -1,10 +1,13 @@
 <template name="legendPage">
   	{{> legendItem}}
 
-	<ul class="datemarkers">
+	<div id="datemarkers">
 		{{#each datemarkers}}
-	  		{{> datemarker}}
+			<!-- <div id="{{idx}}"> -->
+			<div>
+			        {{> datemarker}}
+			</div>
 		{{/each}}
-	</ul>
+	</div>
 
 </template>

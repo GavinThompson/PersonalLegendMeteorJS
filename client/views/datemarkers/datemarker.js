@@ -15,3 +15,13 @@ Template.datemarker.helpers({
 
 
 });
+
+
+
+Template.datemarker.rendered = function() {
+    // Anything here will get executed right when the template
+    // is finished rendering.
+
+    console.log( "test.....")
+
+};

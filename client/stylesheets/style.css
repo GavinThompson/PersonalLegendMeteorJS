@@ -11,8 +11,8 @@
 }
 
 body{
-	background: #eee;
-	color: #666666; 
+	background: #353535;
+	color: #353535; 
 }
 
 .navbar {
@@ -76,32 +76,51 @@ body{
   display: block; float: right; margin-top: 7px;
 }
 
-.datemarkers {
+#datemarkers {
   list-style-type: none;
   margin: 0; 
+  text-align: center;
 }
 
-.datemarkers li h4 {
-  font-size: 16px; margin: 0;
-}
+	#datemarkers .datemarker{
+		margin: 10px 0px;
+	}
 
-.datemarkers li h4 .date {
-  font-size: 12px;
-  font-weight: normal; 
-}
+	#datemarkers .datemarker h4 {
+	  font-size: 16px; margin: 0;
+	}
 
-.datemarkers li h4 a {
-  font-size: 12px 
-}
+	#datemarkers .datemarker h4 .date {
+	  font-size: 12px;
+	  font-weight: normal; 
+	}
 
-.datemarkers li p:last-child {
-  margin-bottom: 0 
-}
+	#datemarkers .datemarker h4 a {
+	  font-size: 12px 
+	}
+
+		#datemarkers .datemarker .content{
+		  min-height: 100px;
+		  padding: 125px 45px;
+		}
+
+		#datemarkers .datemarker .contentHeader{
+		  min-height: 50px;
+		  padding: 50px 45px;
+		  background-color: #A2A2A2;
+		}
+
+
+	#datemarkers .datemarker p:last-child {
+	  margin-bottom: 0 
+	}
 
 .dropdown-menu span {
   display: block; padding: 3px 20px; clear: both; line-height: 20px; color: #bbb; white-space: nowrap;
 
 }
+
+
 
 .load-more {
   display: block;

@@ -1,11 +1,17 @@
 <template name="datemarker">
   	<div class="datemarker" id="marker{{indexInc}}">
   		
-    	<h4>
-      		<span class="author">{{subtitle}}</span>
-      		<span class="date">on {{dateSpan}}</span>
-		</h4>
-		<div style="background-color:{{backgroundColour}} ;">
+  		<div class="contentHeader">
+	    	<h4>
+	      		<span class="author">{{subtitle}}</span>
+	      		<span class="date">on {{dateSpan}}</span>
+			</h4>
+		</div>
+
+
+
+		<!-- <div class="content"  style="background-color:{{bkgColour}};"> -->
+		<div class="content"  data-0="background-color:rgb(145,145,145);" data-500="background-color:{{bkgColour}};">
 	    	<p>{{body}}</p>
 	    </div>
 

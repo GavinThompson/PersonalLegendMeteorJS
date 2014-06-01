@@ -5,7 +5,8 @@
       "iron-router": {},
       "spin": {},
       "accounts-ui-bootstrap-dropdown": {},
-      "glDatePicker": {}
+      "glDatePicker": {},
+      "tinycolor": {}
     },
     "packages": {
       "iron-router": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/properapp/glDatePicker.git",
         "tag": "v0.1.0",
         "commit": "16c95d1f939fe35ebb7ede245f0fbfd57e38df9f"
+      },
+      "tinycolor": {
+        "git": "https://github.com/kidovate/meteor-tinycolor.git",
+        "tag": "v0.9.17",
+        "commit": "3895f74e7841027f88f87e134e6400378f6f5b34"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -17,20 +17,6 @@ Template.datemarker.helpers({
 
 	contentTop: 0,
 
-	dataTop: function(){
-		// calculate the scrollTop position of the Template....
-		// set Template.datemarker.contentTop to said calculation
-		// return numeric value
-	},
-
-	dataBottom: function(){
-		// calculate template total height ("#datemarker" +index) (....maybe index +1 needed?)
-		// Sum Template.datemarker.contentTop to line above calculation.
-
-		// return sum
-
-	},
-
 	bkgColour: function(){
 		hex = this.backgroundColour.substring(0, 7)
 		// return hex
@@ -44,7 +30,6 @@ Template.datemarker.helpers({
 
 		return colourRGB
 	},
-
 	
 
 });

@@ -38,7 +38,7 @@ Meteor.methods({
 			userId: user._id,
 			author: user.username,
 			submitted: new Date().getTime(),
-			commentsCount: 0
+			datemarkersCount: 0
 		});
 
 		// wait for 5 seconds
@@ -54,6 +54,5 @@ Meteor.methods({
 		var legendId = Legends.insert(legend);
 		
 		return legendId; 
-
 	}
 });

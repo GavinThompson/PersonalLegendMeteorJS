@@ -2,9 +2,9 @@
   "packages": {
     "iron-router": {},
     "spin": {},
-    "accounts-ui-bootstrap-dropdown": {},
     "glDatePicker": {},
     "tinycolor": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "accounts-entry": {}
   }
 }

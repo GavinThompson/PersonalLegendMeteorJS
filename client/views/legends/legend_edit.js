@@ -25,7 +25,7 @@ Template.legendEdit.events({
 		if (confirm("Delete this legend?")) { 
 			var currentLegendId = this._id;
 			Legends.remove(currentLegendId);
-			Router.go('legendsList');
+			Router.go('home');
 		}
 	}
 });

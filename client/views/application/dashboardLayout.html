@@ -1,0 +1,16 @@
+<template name="dashboardLayout">
+
+	<div id="dashboardSide">
+		{{> dashboardSide}}
+	</div>
+
+	<div class="container">	
+		{{> header}}
+		{{> errors}}
+
+	    <div id="main" class="row-fluid">
+		    {{> yield}}
+    	</div>
+    </div>
+
+</template>

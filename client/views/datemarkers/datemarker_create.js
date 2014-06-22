@@ -1,9 +1,10 @@
-console.log("loooog")
 
 Template.datemarkerCreate.rendered = function() {
-
-	console.log("")
-	$(".datepicker").glDatePicker(); 
+	// console.log("datemarkerCreate rendered....")
+	// console.log( $(".datepicker") )
+	
+	// $(".datepicker").glDatePicker(); 
+	// Above causing error... not sure why
 }
 
 Template.datemarkerCreate.events({

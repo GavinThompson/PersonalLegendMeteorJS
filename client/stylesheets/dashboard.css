@@ -1,0 +1,7 @@
+
+#dashboardSide{
+	position: fixed;
+	height: 100%;
+	width: 30px;
+	background: rgba(47, 181, 210, 1.0);
+}

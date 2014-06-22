@@ -6,7 +6,8 @@
       "spin": {},
       "accounts-ui-bootstrap-dropdown": {},
       "glDatePicker": {},
-      "tinycolor": {}
+      "tinycolor": {},
+      "font-awesome": {}
     },
     "packages": {
       "iron-router": {
@@ -33,6 +34,11 @@
         "git": "https://github.com/kidovate/meteor-tinycolor.git",
         "tag": "v0.9.17",
         "commit": "3895f74e7841027f88f87e134e6400378f6f5b34"
+      },
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

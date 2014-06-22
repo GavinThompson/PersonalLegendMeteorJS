@@ -2,6 +2,13 @@
 #dashboardSide{
 	position: fixed;
 	height: 100%;
-	width: 30px;
+	width: 38px;
 	background: rgba(47, 181, 210, 1.0);
+}
+
+#dashboardSideArrow{
+	position: absolute;
+	top: 40%%;
+	right: 0;
+
 }

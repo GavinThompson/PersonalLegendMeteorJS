@@ -1,0 +1,71 @@
+<template name="dashboardSide">
+
+	<ul id="innerMenu">
+		<li>
+			<a href="{{pathFor 'home'}}">
+				<i class="fa fa-home fa-3x"></i>
+				<br>
+				Home
+			</a>
+		</li>
+
+		<li>
+			<a href="{{pathFor 'dashboard'}}">
+				<i class="fa fa-bar-chart-o fa-3x"></i>
+				<br>
+				Dashboard
+			</a>
+		</li>
+
+		<li>
+			<!-- comment A tag out when you implement legend sublist-->
+			<a href="{{pathFor 'root'}}">
+				<i class="fa fa-compass fa-3x"></i>
+				<br>
+				Legends
+			</a>
+		</li>
+		
+		<li id="legendSubList"> 
+			<ul>
+				<li>
+					New Legends
+				</li>
+
+				<li>
+					Edit Legend
+				</li>
+
+				<li>
+					Read Legend
+				</li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="{{pathFor 'root'}}">
+				<i class="fa fa-heart fa-3x"></i>
+				<br>
+				Loved
+			</a>
+		</li>
+
+		<li>
+			<a href="{{pathFor 'account'}}">
+				<i class="fa fa-cogs fa-3x"></i>
+				<br>
+				Account
+			</a>
+		</li>
+
+		<li>
+			<!-- Sign Out -->
+			<a href="/sign-out">
+				<i class="fa fa-power-off fa-3x"></i> 
+				<br>
+				{{{beforeSignOut}}}{{t9n "signOut"}}
+			</a>
+		</li>
+	</ul>
+	
+</template>

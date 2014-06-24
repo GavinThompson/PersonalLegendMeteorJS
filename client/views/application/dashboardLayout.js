@@ -1,31 +1,40 @@
 Template.dashboardLayout.events({ 
 	'mouseenter #dashboardSide': function(e) {
-		console.log("mouseenter")
+		$("#dashboardSideArrow").fadeOut( 250, function(){})
 		$("#dashboardSide").animate({
-			width: "200px",
-			opacity: "0.4"
+			// opacity: "0.4",
+			width: "130px"
 		}, 500, 'easeOutBounce', function(){
-			$("#dashboardSideArrow").fadeOut( 250, function(){
-				// 
-			})
-			$("#sideInner").fadeIn( 500 )
-
+			$("#innerMenu").fadeIn( 500 )
 		})
  		// TODO: show inner sidemenu div; hide arrow (to be implemented) 
 	},
 
 	'mouseleave #dashboardSide': function(e) {
+		$("#innerMenu").fadeOut( 250, function(){})
 		$("#dashboardSide").animate({
-			width: "38px",
-			opacity: "1.0"
+			// opacity: "1.0",
+			width: "38px"
 		}, 500, 'easeOutBounce', function(){
-
-			$("#sideInner").fadeOut( 250, function(){
-				// 
-			})
 			$("#dashboardSideArrow").fadeIn( 500 )
 		})
 		// TODO: hide inner sidemenu div; show arrow (to be implemented)
+	},
+
+	'mouseenter #innerMenu li': function(e) {
+		$(e.target).css({
+			"color": "ghostwhite",
+			"background": "rgba(164, 164, 164, 0.7)",
+			"border":"1px solid #FF7256" 
+		})		
+	},
+
+	'mouseleave #innerMenu li': function(e) {
+		$(e.target).css({
+			"color": "inherit",
+			"background": "inherit",
+			"border": "none"
+		})
 	}
 
 });

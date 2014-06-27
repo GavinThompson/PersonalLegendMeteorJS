@@ -1,13 +1,18 @@
-.grid-block, .main, .legend, .datemarkers li, .datemarker-form {
-	background: #fff;
+.grid-block,
+.main,
+.legend,
+.datemarkers li,
+.datemarker-form {
+	/*background: #fff;*/
 	border-radius: 3px;
 	padding: 10px;
 	margin-bottom: 10px;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	color: ghostwhite;
 }
 
 .datemarker-form {
-	background: ghostwhite;
+	/*background: ghostwhite;*/
 }
 
 body{

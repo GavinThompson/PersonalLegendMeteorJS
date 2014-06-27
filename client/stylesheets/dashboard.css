@@ -1,3 +1,8 @@
+#dashboardMain{
+	padding-top: 35px;
+	padding-left: 15px;
+}
+
 #dashboardTop{
 	position: absolute;
 	top: 0;
@@ -8,6 +13,7 @@
 }
 
 #dashboardSide{
+	z-index: 999;
 	position: fixed;
 	height: 100%;
 	width: 38px;
@@ -59,7 +65,7 @@
 				text-decoration: none;
 			}
 
-	#innerMenu li#legendSubList{
+	#innerMenu ul#legendSubList{
 		list-style: none;
 		display: none;
 	}

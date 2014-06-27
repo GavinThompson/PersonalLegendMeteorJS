@@ -1,7 +1,7 @@
 <template name="dashboardSide">
 
 	<ul id="innerMenu">
-		<li>
+		<li class="hoverable">
 			<a href="{{pathFor 'home'}}">
 				<i class="fa fa-home fa-3x"></i>
 				<br>
@@ -9,7 +9,7 @@
 			</a>
 		</li>
 
-		<li>
+		<li class="hoverable">
 			<a href="{{pathFor 'dashboard'}}">
 				<i class="fa fa-bar-chart-o fa-3x"></i>
 				<br>
@@ -17,32 +17,17 @@
 			</a>
 		</li>
 
-		<li>
+		<li class="hoverable">
 			<!-- comment A tag out when you implement legend sublist-->
-			<a href="{{pathFor 'root'}}">
+			<a href="{{pathFor 'manage'}}">
 				<i class="fa fa-compass fa-3x"></i>
 				<br>
 				Legends
 			</a>
+
 		</li>
 		
-		<li id="legendSubList"> 
-			<ul>
-				<li>
-					New Legends
-				</li>
-
-				<li>
-					Edit Legend
-				</li>
-
-				<li>
-					Read Legend
-				</li>
-			</ul>
-		</li>
-
-		<li>
+		<li class="hoverable">
 			<a href="{{pathFor 'root'}}">
 				<i class="fa fa-heart fa-3x"></i>
 				<br>
@@ -50,7 +35,7 @@
 			</a>
 		</li>
 
-		<li>
+		<li class="hoverable">
 			<a href="{{pathFor 'account'}}">
 				<i class="fa fa-cogs fa-3x"></i>
 				<br>
@@ -58,7 +43,7 @@
 			</a>
 		</li>
 
-		<li>
+		<li class="hoverable">
 			<!-- Sign Out -->
 			<a href="/sign-out">
 				<i class="fa fa-power-off fa-3x"></i> 

@@ -21,7 +21,7 @@ Template.dashboardLayout.events({
 		// TODO: hide inner sidemenu div; show arrow (to be implemented)
 	},
 
-	'mouseenter #innerMenu li': function(e) {
+	'mouseenter #innerMenu li.hoverable': function(e) {
 		$(e.target).css({
 			"color": "ghostwhite",
 			"background": "rgba(164, 164, 164, 0.7)",
@@ -29,7 +29,7 @@ Template.dashboardLayout.events({
 		})		
 	},
 
-	'mouseleave #innerMenu li': function(e) {
+	'mouseleave #innerMenu li.hoverable': function(e) {
 		$(e.target).css({
 			"color": "inherit",
 			"background": "inherit",

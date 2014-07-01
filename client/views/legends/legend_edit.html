@@ -29,8 +29,9 @@
 
    		<div class="control-group">
     		<div class="controls">
-        		
-        		<a class="btn btn-danger delete" href="#">Delete legend</a>
+        		<a class="btn btn-danger delete" href="#">
+                    Delete legend
+                </a>
     		</div>
 		</div>
     	
@@ -38,11 +39,17 @@
 
     
 
-    {{#if currentUser}}
-        {{> datemarkerCreate}}
-    {{else}}
-        <p>Please log in to leave a datemarker.</p>
-    {{/if}}
+    <div>
+        <a href="{{pathFor 'datemarkerCreate'}}" class="btn btn-success">
+            Create Datemarker
+        </a>
+
+        <div id="datemarkerEditCards">
+            {{#each datemarkers}}
+                {{> datemarkerCard}}
+            {{/each}}
+        </div>
+    </div>
 
 
 </template>

@@ -1,0 +1,50 @@
+
+#datemarkerEditCards .panel {
+	float: left;
+	width: 150px;
+	height: 180px;
+	margin: 20px;
+	position: relative;
+	/*font-size: .8em;*/
+
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+}
+	/* -- make sure to declare a default for every property that you want animated -- */
+	/* -- general styles, including Y axis rotation -- */
+	#datemarkerEditCards .panel .front {
+		float: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 900;
+		width: inherit;
+		height: inherit;
+		border: 8px solid #1abc9c;
+		background: #95a5a6;
+		text-align: center;
+
+		-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+		-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+		box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+		-webkit-transform: rotateX(0deg) rotateY(0deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+
+		-moz-transform: rotateX(0deg) rotateY(0deg);
+		-moz-transform-style: preserve-3d;
+		-moz-backface-visibility: hidden;
+
+		/* -- transition is the magic sauce for animation -- */
+		-o-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		-moz-transition: all .4s ease-in-out;
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+	}
+
+	/* -- cosmetics -- */
+	#datemarkerEditCards .panel .pad {
+		padding: 0 15px;
+	}

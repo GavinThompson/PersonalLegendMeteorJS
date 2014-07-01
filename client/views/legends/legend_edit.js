@@ -1,10 +1,16 @@
+Template.legendEdit.helpers({ 
+	datemarkers: function() {
+		return Datemarkers.find({legendId: this._id}, {sort: {dateSpan: 1}});
+	}
+});
+
+
 Template.legendEdit.events({ 
+
 	'submit form': function(e) {
 	    
 	    e.preventDefault();
-		
 		var currentLegendId = this._id;
-		
 		var legendProperties = {
 			title: $(e.target).find('[name=title]').val(),
 			synopsis: $(e.target).find('[name=synopsis]').val()
@@ -19,6 +25,8 @@ Template.legendEdit.events({
         	}
 		}); 
 	},
+
+
 
 	'click .delete': function(e) { 
 		e.preventDefault();

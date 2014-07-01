@@ -1,11 +1,11 @@
 
-Template.datemarkerCreate.rendered = function() {
+// Template.datemarkerCreate.rendered = function() {
 	// console.log("datemarkerCreate rendered....")
 	// console.log( $(".datepicker") )
 	
 	// $(".datepicker").glDatePicker(); 
 	// Above causing error... not sure why
-}
+// }
 
 Template.datemarkerCreate.events({
 
@@ -13,7 +13,6 @@ Template.datemarkerCreate.events({
 	'submit form': function(e, template) {
 	    e.preventDefault();
 
-		var $body = $(e.target).find('[name=body]');
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
 		var $dateSpan = $(e.target).find('[name=dateSpan]');
@@ -21,7 +20,6 @@ Template.datemarkerCreate.events({
 
 
 		var datemarker = {
-	    	body: $body.val(),
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
@@ -35,8 +33,13 @@ Template.datemarkerCreate.events({
 		Meteor.call('datemarker', datemarker, function(error, datemarkerId) { 
 			if(error){
 				throwError(error.reason); 
+				
+				if (error.error === 302){
+					Router.go('legendPage', {_id: error.details})
+				}
 			}else{
-	        	$body.val('');
+	        	// else go to page
+				Router.go('legendPage', {_id: template.data._id});
 	      	}
 		});
 	}

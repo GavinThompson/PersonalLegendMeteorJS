@@ -1,0 +1,35 @@
+<template name="datemarkerCard">
+  	
+  	<div class="hovercard panel">
+
+		<div class="front">
+		    <div class="pad">
+		        <h4> {{subtitle}} </h4>
+		        <br/>
+		        <i class="fa fa-book fa-3x"></i>
+		        <p> {{dateSpan}} </p>
+
+		        <h4>
+		        	<a href="{{pathFor 'datemarkerEdit' _legendId=legendId _id=_id }}">
+		        		Edit
+		        	</a>
+		    	</h4>
+
+			</div>
+		</div>
+		<!-- <div class="back">
+			<div class="pad">
+		    	<h4>
+		    		<span class="back-card-title">
+		    			Title - - Here
+		    		</span>
+		    	</h4>
+					<span class="top5-skill-listings">
+						Edit link???
+					</span>
+		    </div>
+		</div> -->
+
+	</div>
+	
+</template>

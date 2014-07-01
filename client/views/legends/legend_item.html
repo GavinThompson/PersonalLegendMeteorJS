@@ -8,7 +8,11 @@
                 {{synopsis}}
       			    submitted by {{author}}
                 <a href="{{pathFor 'legendPage'}}">{{datemarkersCount}} datemarkers</a>
-      			    {{#if ownLegend}}<a href="{{pathFor 'legendEdit'}}">Edit</a>{{/if}}
+      			    {{#if ownLegend}}
+                  <a href="{{pathFor 'legendEdit'}}">
+                    Edit
+                  </a>
+                {{/if}}
       		  </p>
    		  </div>
 

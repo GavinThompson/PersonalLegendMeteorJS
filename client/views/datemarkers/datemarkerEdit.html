@@ -1,0 +1,54 @@
+<template name="datemarkerEdit">
+  
+  	<h2>Edit DateMarker Event</h2>
+  	  	<form name="datemarker" class="datemarker-form">
+  	 		
+  	        <div class="control-group">
+  	            <div class="controls">
+  	                <label for="subtitle">
+  	                	  Title of this marker
+  	                </label>
+  	                <input name="subtitle" type="text" value="{{subtitle}}">
+
+  	            </div>
+  	        </div>
+
+
+  	        <div class="control-group">
+  	            <div class="controls">
+                    <label for="dateSpan">
+  	                   	Pick a date for this event
+  	                </label>
+  	                <input type="date" name="dateSpan" class="datepicker" value="{{dateSpan}}">
+  	            </div>
+  	        </div>
+
+  	    	<div class="control-group">
+  	        	<div class="controls">
+  	            	<label for="body">
+  	            	  	Datemarker on this post
+  	            	</label>
+  	            	<textarea name="body">{{body}}</textarea>
+  	        	</div>
+  	    	</div>
+
+  	        <div class="control-group">
+  	            <div class="controls">
+  	                <label for="backgroundColour">
+  	                	  Select a background colour for this object:
+  	                </label>
+  	                <input type="color" name="backgroundColour" value="{{backgroundColour}}">
+  	            </div>
+  	        </div>
+  	    	
+  	    	<div class="control-group">
+  	        	<div class="controls">
+  	            	<button type="submit" class="btn">
+  	            		 Edit datemarker
+  	            	</button>
+  	        	</div>
+  	    	</div>
+  	  	
+  	  	</form>
+
+</template>

@@ -7,7 +7,8 @@
       "glDatePicker": {},
       "tinycolor": {},
       "font-awesome": {},
-      "accounts-entry": {}
+      "accounts-entry": {},
+      "houston": {}
     },
     "packages": {
       "iron-router": {
@@ -40,6 +41,11 @@
         "tag": "v0.7.3",
         "commit": "7facaa045d3720eeeba3420c28e48d5709188fe3"
       },
+      "houston": {
+        "git": "https://github.com/gterrono/houston.git",
+        "tag": "v1.0.6",
+        "commit": "49765acf835385de6de6160b0c86514d5af09395"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.4",
@@ -49,6 +55,11 @@
         "git": "https://github.com/softwarerero/meteor-accounts-t9n.git",
         "tag": "v0.0.5",
         "commit": "ad9539a8818049d5d9fa050d8b2a1f62706483b1"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.2.2",
+        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
       }
     }
   }

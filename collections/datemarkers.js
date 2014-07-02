@@ -1,11 +1,23 @@
 Datemarkers = new Meteor.Collection('datemarkers');
 
+
+Datemarkers.deny({
+	// update: function(userId, datemarker, fieldNames) {
+	//     // may only edit the following two fields:
+	// 	// return (_.without(fieldNames, 'body').length > 0); 
+	// }
+});
+
+Datemarkers.allow({
+  update: ownsDocument,
+  remove: ownsDocument
+});
+
 Meteor.methods({
 	
 	datemarker: function(datemarkerAttributes) {
 		
 		var user = Meteor.user();
-
 		var legend = Legends.findOne(datemarkerAttributes.legendId); 
 		
 		// ensure the user is logged in

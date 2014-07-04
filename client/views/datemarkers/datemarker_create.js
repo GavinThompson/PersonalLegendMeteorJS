@@ -35,11 +35,11 @@ Template.datemarkerCreate.events({
 				throwError(error.reason); 
 				
 				if (error.error === 302){
-					Router.go('legendPage', {_id: error.details})
+					Router.go('legendEdit', {_id: error.details})
 				}
 			}else{
 	        	// else go to page
-				Router.go('legendPage', {_id: template.data._id});
+				Router.go('legendEdit', {_id: template.data._id});
 	      	}
 		});
 	}

@@ -24,16 +24,16 @@ Template.legendEdit.events({
 		        Router.go('legendPage', {_id: currentLegendId});
         	}
 		}); 
-	},
-
-
-
-	'click .delete': function(e) { 
-		e.preventDefault();
-		if (confirm("Delete this legend?")) { 
-			var currentLegendId = this._id;
-			Legends.remove(currentLegendId);
-			Router.go('home');
-		}
 	}
 });
+	// },
+	// 
+	// 'click .delete': function(e) { 
+	// 	e.preventDefault();
+	// 	if (confirm("Delete this legend?")) { 
+	// 		var currentLegendId = this._id;
+	// 		Legends.remove(currentLegendId);
+	// 		Router.go('home');
+	// 	}
+	// }
+	// });

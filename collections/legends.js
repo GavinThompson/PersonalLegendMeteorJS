@@ -8,7 +8,8 @@ Legends.allow({
 Legends.deny({
 	update: function(userId, legend, fieldNames) {
 	    // may only edit the following two fields:
-		return (_.without(fieldNames, 'title', 'synopsis').length > 0); 
+		// return (_.without(fieldNames, 'title', 'synopsis').length > 0); 
+		// REVIEW WHAT THE ABOVE DOES IN Discover Meteor
 	}
 });
 

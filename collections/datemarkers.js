@@ -2,10 +2,11 @@ Datemarkers = new Meteor.Collection('datemarkers');
 
 
 Datemarkers.deny({
-	// update: function(userId, datemarker, fieldNames) {
-	//     // may only edit the following two fields:
-	// 	// return (_.without(fieldNames, 'body').length > 0); 
-	// }
+	update: function(userId, datemarker, fieldNames) {
+	    // may only edit the following two fields:
+		return (_.without(fieldNames, 'subtitle', 'body', 'dateSpan', 'backgroundColour').length > 0); 
+		// REVIEW WHAT THE ABOVE DOES IN Discover Meteor
+	}
 });
 
 Datemarkers.allow({

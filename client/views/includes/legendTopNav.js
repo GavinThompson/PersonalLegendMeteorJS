@@ -1,5 +1,10 @@
 Template.legendTopNav.helpers({ 
 
+
+	ownLegend: function() {
+		return this.userId == Meteor.userId(); 
+	},
+
 	navIndex: 0,
 
 	navIndexInc: function(){

@@ -1,10 +1,5 @@
 Template.legendPage.helpers({ 
 	datemarkers: function() {
-		// var dms = Datemarkers.find({legendId: this._id}, {sort: {dateSpan: 1}});
-		// console.log("dms")
-		// console.log(dms)
-		// console.log("ID")
-		// console.log(this._id)
 		return Datemarkers.find({legendId: this._id}, {sort: {dateSpan: 1}});
 	}
 });

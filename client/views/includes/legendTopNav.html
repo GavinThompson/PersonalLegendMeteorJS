@@ -1,0 +1,18 @@
+<template name="legendTopNav">
+	<div id="legendTopNav">
+
+		<div id="innerLegendTopNav">
+			<!-- FOR LOOP -->
+			{{#each datemarkerDivs}}
+			
+				<a class="topNavLink" href="#marker{{navIndexInc}}">
+					<div class="topNavElement">
+							<!-- {{navIndex}} -->
+					</div>
+				</a>
+
+			{{/each}}
+		</div>
+
+	</div>
+</template>

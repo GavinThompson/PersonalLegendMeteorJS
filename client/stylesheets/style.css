@@ -1,3 +1,7 @@
+.clearfix{
+	clear:both;
+}
+
 .grid-block,
 .main,
 .legend,

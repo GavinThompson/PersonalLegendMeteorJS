@@ -1,6 +1,6 @@
 <template name="datemarkerCard">
   	
-  	<div class="hovercard panel">
+  <!-- 	<div class="hovercard panel">
 
 		<div class="front">
 		    <div class="pad">
@@ -17,19 +17,70 @@
 
 			</div>
 		</div>
-		<!-- <div class="back">
-			<div class="pad">
-		    	<h4>
-		    		<span class="back-card-title">
-		    			Title - - Here
-		    		</span>
-		    	</h4>
-					<span class="top5-skill-listings">
-						Edit link???
-					</span>
-		    </div>
-		</div> -->
-
-	</div>
+		
+	</div> -->
 	
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter Card</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+</head>
+<body> -->
+	<div class="dateCard">
+		<div class="cardFrame">
+			<div class="cardHeader">
+				<div class="bio" style="border-bottom: 8px solid {{backgroundColour}};">
+	        		<img src="/images/2.jpg" alt="background" class="bg">
+					<div class="desc">
+						<p>{{bodySummary}}</p>
+					</div>
+				</div>
+				
+				<div class="avatarcontainer">
+					<img src="/images/redbamf.png" alt="avatar" class="avatar" style="border: 8px solid {{backgroundColour}};">
+					<div class="hover" style="border: 8px solid {{backgroundColour}}; background: {{backgroundColour}};">
+							<div class="icon-twitter"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="data">
+					<ul>
+						<!-- <li>
+							2,934
+							<span>Tweets</span>
+						</li> -->
+						<li>
+							{{dateSpan}}
+							<span>{{subtitle}}</span>
+						</li>
+						<!-- <li>
+							530
+							<span>Following</span>
+						</li> -->
+					</ul>
+				</div>
+				<a href="{{pathFor 'datemarkerEdit' _legendId=legendId _id=_id }}">
+					<div class="follow"> 
+						<!-- <div class="icon-twitter">
+						</div>  -->
+						<i class="fa fa-pencil"></i>
+						EDIT
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</div>
+
 </template>

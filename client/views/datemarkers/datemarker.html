@@ -1,21 +1,16 @@
 <template name="datemarker">
-  	<div class="datemarker" id="marker{{indexInc}}">
-  		
-  		<div class="contentHeader">
-	    	<h4>
-	      		<span class="subtitle">{{subtitle}}</span>
-	      		on 
-	      		<span class="date">{{dateSpan}}</span>
+	<div class="datemarker" id="marker{{indexInc}}">
+		<div class="contentHeader">
+			<h4>
+				<span class="subtitle">{{subtitle}}</span>
+					on 
+				<span class="date">{{dateSpan}}</span>
 			</h4>
 		</div>
 
-		<!-- <div class="content"  style="background-color:{{bkgColour}};"> -->
 		<div class="content"  data-bottom-center="background-color:rgb(145,145,145);" data--100-top="background-color:{{bkgColour}};">
-
 			<h3>{{dataTop}}</h3>
-	    	<p>{{body}}</p>
-
-	    </div>
-
-  	</div>
+			<p>{{breaklines body}}</p>
+		</div>
+	</div>
 </template>

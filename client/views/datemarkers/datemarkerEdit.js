@@ -1,5 +1,10 @@
 Template.datemarkerEdit.helpers({ 
 	// 
+	testyyyy: function(){
+		stringy = this.body
+		splitty = stringy.replace(/\n/g,"<br>")
+		console.log(splitty)
+	}
 });
 
 

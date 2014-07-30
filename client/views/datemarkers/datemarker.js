@@ -29,9 +29,8 @@ Template.datemarker.helpers({
 		console.log(colourRGB)	
 
 		return colourRGB
-	},
+	}
 	
-
 });
 
 

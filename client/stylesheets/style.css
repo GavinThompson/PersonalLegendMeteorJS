@@ -5,8 +5,8 @@
 .grid-block,
 .main,
 .legend,
-.datemarkers li,
-.datemarker-form {
+.chapters li,
+.chapter-form {
 	/*background: #fff;*/
 	border-radius: 3px;
 	padding: 10px;
@@ -15,7 +15,7 @@
 	color: ghostwhite;
 }
 
-.datemarker-form {
+.chapter-form {
 	/*background: ghostwhite;*/
 }
 

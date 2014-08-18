@@ -1,48 +1,48 @@
-Datemarkers = new Meteor.Collection('datemarkers');
+Chapters = new Meteor.Collection('chapters');
 
 
-Datemarkers.deny({
-	update: function(userId, datemarker, fieldNames) {
+Chapters.deny({
+	update: function(userId, chapter, fieldNames) {
 	    // may only edit the following two fields:
 		return (_.without(fieldNames, 'subtitle', 'body', 'dateSpan', 'backgroundColour').length > 0); 
 		// REVIEW WHAT THE ABOVE DOES IN Discover Meteor
 	}
 });
 
-Datemarkers.allow({
+Chapters.allow({
   update: ownsDocument,
   remove: ownsDocument
 });
 
 Meteor.methods({
 	
-	datemarker: function(datemarkerAttributes) {
+	chapter: function(chapterAttributes) {
 		
 		var user = Meteor.user();
-		var legend = Legends.findOne(datemarkerAttributes.legendId); 
+		var legend = Legends.findOne(chapterAttributes.legendId); 
 		
 		// ensure the user is logged in
 		if(!user){
-			throw new Meteor.Error(401, "You need to login to make datemarkers");
+			throw new Meteor.Error(401, "You need to login to make chapters");
 		}
-		if(!datemarkerAttributes.body){
+		if(!chapterAttributes.body){
 			throw new Meteor.Error(422, 'Please write some content');
 		}
 		if(!legend){
-			throw new Meteor.Error(422, 'You must datemarker on a legend');
+			throw new Meteor.Error(422, 'You must chapter on a legend');
 		}
 
-		datemarker = _.extend(_.pick(datemarkerAttributes, 'legendId', 'body'), { 
+		chapter = _.extend(_.pick(chapterAttributes, 'legendId', 'body'), { 
 			userId: user._id,
-			subtitle: datemarkerAttributes.subtitle,
-			body: datemarkerAttributes.body,
-			dateSpan: datemarkerAttributes.dateSpan,
-			backgroundColour: datemarkerAttributes.backgroundColour,
+			subtitle: chapterAttributes.subtitle,
+			body: chapterAttributes.body,
+			dateSpan: chapterAttributes.dateSpan,
+			backgroundColour: chapterAttributes.backgroundColour,
 			submitted: new Date().getTime()
 		});
 
-		// update the post with the number of datemarkers
-		Legends.update(datemarker.legendId, {$inc: {datemarkersCount: 1}});
+		// update the post with the number of chapters
+		Legends.update(chapter.legendId, {$inc: {chaptersCount: 1}});
 
 
 		// wait for 5 seconds
@@ -55,7 +55,7 @@ Meteor.methods({
 				future.wait();
 			}
 
-		return Datemarkers.insert(datemarker); 
+		return Chapters.insert(chapter); 
 
 	}
 });

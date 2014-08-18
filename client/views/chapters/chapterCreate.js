@@ -1,13 +1,13 @@
 
-// Template.datemarkerCreate.rendered = function() {
-	// console.log("datemarkerCreate rendered....")
+// Template.chapterCreate.rendered = function() {
+	// console.log("chapterCreate rendered....")
 	// console.log( $(".datepicker") )
 	
 	// $(".datepicker").glDatePicker(); 
 	// Above causing error... not sure why
 // }
 
-Template.datemarkerCreate.events({
+Template.chapterCreate.events({
 
 
 	'submit form': function(e, template) {
@@ -19,7 +19,7 @@ Template.datemarkerCreate.events({
 		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
 
 
-		var datemarker = {
+		var chapter = {
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
@@ -27,10 +27,10 @@ Template.datemarkerCreate.events({
 	    	legendId: template.data._id
 	    };
 
-	    console.log("datemarker: ")
-	    console.log(datemarker)
+	    console.log("chapter: ")
+	    console.log(chapter)
 
-		Meteor.call('datemarker', datemarker, function(error, datemarkerId) { 
+		Meteor.call('chapter', chapter, function(error, chapterId) { 
 			if(error){
 				throwError(error.reason); 
 				

@@ -2,6 +2,6 @@ Meteor.publish('legends', function() {
 	return Legends.find();
 });
 
-Meteor.publish('datemarkers', function(legendId) { 
-	return Datemarkers.find({legendId: legendId});
+Meteor.publish('chapters', function(legendId) { 
+	return Chapters.find({legendId: legendId});
 });

@@ -1,4 +1,4 @@
-Template.datemarker.helpers({
+Template.chapter.helpers({
 
 	submittedText: function() {
 		return new Date(this.submitted).toString(); 
@@ -12,7 +12,7 @@ Template.datemarker.helpers({
 	index: 0,
 
 	indexInc: function(){
-		return Template.datemarker.index++;
+		return Template.chapter.index++;
 	},
 
 	contentTop: 0,
@@ -35,7 +35,7 @@ Template.datemarker.helpers({
 
 
 
-Template.datemarker.rendered = function() {
+Template.chapter.rendered = function() {
     // Anything here will get executed right when the template
     // is finished rendering.
 

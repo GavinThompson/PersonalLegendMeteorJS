@@ -1,6 +1,6 @@
 Template.legendEdit.helpers({ 
-	datemarkers: function() {
-		return Datemarkers.find({legendId: this._id}, {sort: {dateSpan: 1}});
+	chapters: function() {
+		return Chapters.find({legendId: this._id}, {sort: {dateSpan: 1}});
 	}
 });
 

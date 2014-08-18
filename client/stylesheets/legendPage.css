@@ -26,43 +26,43 @@
 	  	background-color: papayawhip;
 	}
 
-/*DATEMARKERS*/
-#datemarkers {
+/*CHAPTERS*/
+#chapters {
   	list-style-type: none;
   	margin: 0; 
   	text-align: center;
 }
 
-	#datemarkers .datemarker{
+	#chapters .chapter{
 		margin: 0px 0px;
 	}
 
-	#datemarkers .datemarker h4 {
+	#chapters .chapter h4 {
 	  font-size: 16px; 
 	  margin: 0;
 	}
 
-		#datemarkers .datemarker h4 .date {
+		#chapters .chapter h4 .date {
 		  font-size: 12px;
 		  font-weight: normal; 
 		}
 
-			#datemarkers .datemarker h4 a {
+			#chapters .chapter h4 a {
 			  font-size: 12px 
 			}
 
-				#datemarkers .datemarker .content{
+				#chapters .chapter .content{
 				  min-height: 100px;
 				  padding: 125px 45px;
 				}
 
-				#datemarkers .datemarker .contentHeader{
+				#chapters .chapter .contentHeader{
 				  min-height: 50px;
 				  padding: 50px 45px;
 				  background-color: #A2A2A2;
 				}
 
 
-	#datemarkers .datemarker p:last-child {
+	#chapters .chapter p:last-child {
 	  margin-bottom: 0 
 	}

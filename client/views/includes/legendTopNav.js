@@ -11,8 +11,8 @@ Template.legendTopNav.helpers({
 		return Template.legendTopNav.navIndex++;
 	},
 
-	datemarkerDivs: function(){
-		return Datemarkers.find({legendId: this._id}, {sort: {dateSpan: 1}});
+	chapterDivs: function(){
+		return Chapters.find({legendId: this._id}, {sort: {dateSpan: 1}});
 	}
 
 });
@@ -23,11 +23,11 @@ Template.legendTopNav.events({
 	'click .topNavLink': function( e ) {
 		e.preventDefault();
 		
-		var datemarkerID = $(e.currentTarget).attr( "href" )
-		console.log("datemarkerID")
-		console.log(datemarkerID)
+		var chapterID = $(e.currentTarget).attr( "href" )
+		console.log("chapterID")
+		console.log(chapterID)
 		$('html, body').animate({
-			scrollTop: $( datemarkerID).offset().top - 80 
+			scrollTop: $( chapterID).offset().top - 80 
 		}, 'slow', 'linear');
 	},
 

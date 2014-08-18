@@ -1,4 +1,4 @@
-Template.datemarkerEdit.helpers({ 
+Template.chapterEdit.helpers({ 
 	// 
 	testyyyy: function(){
 		stringy = this.body
@@ -8,14 +8,14 @@ Template.datemarkerEdit.helpers({
 });
 
 
-Template.datemarkerEdit.events({ 
+Template.chapterEdit.events({ 
 	// 
 	'submit form': function(e, template) {
 	    e.preventDefault();
 	    if(!Meteor.user()) throw 'You must be logged in.';
 
 
-	    var currentDatemarkerId = this._id;
+	    var currentChapterId = this._id;
 	    var currentLegendId = this.legendId;
 
 		var $subtitle = $(e.target).find('[name=subtitle]');
@@ -24,7 +24,7 @@ Template.datemarkerEdit.events({
 		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
 
 
-		var datemarkerProperties = {
+		var chapterProperties = {
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
@@ -32,9 +32,9 @@ Template.datemarkerEdit.events({
 	    	// legendId: this.legendId
 	    };
   
-		Datemarkers.update(currentDatemarkerId, 
+		Chapters.update(currentChapterId, 
 			{$set:
-				datemarkerProperties
+				chapterProperties
 			},	
 			function(error){ 
 				if(error){
@@ -49,11 +49,11 @@ Template.datemarkerEdit.events({
 
 	'click .delete': function(e) { 
 		e.preventDefault();
-		if (confirm("Delete this datemarker?")) { 
-			var currentDatemarkerId = this._id;
+		if (confirm("Delete this chapter?")) { 
+			var currentChapterId = this._id;
 			var currentLegendId = this.legendId;
 
-			var dmCount = Legends.findOne( currentLegendId ).datemarkersCount
+			var dmCount = Legends.findOne( currentLegendId ).chaptersCount
 			console.log("dmCOUNT")
 			console.log(dmCount)
 
@@ -61,10 +61,10 @@ Template.datemarkerEdit.events({
 			console.log("dmCOUNTMinus")
 			console.log(dmCountMinus)
 
-			Datemarkers.remove(currentDatemarkerId);
-			Legends.update(datemarker.legendId, {$set: {datemarkersCount: dmCountMinus}});
+			Chapters.remove(currentChapterId);
+			Legends.update(chapter.legendId, {$set: {chaptersCount: dmCountMinus}});
 			console.log("dmCOUNT After")
-			console.log(Legends.findOne( currentLegendId ).datemarkersCount)
+			console.log(Legends.findOne( currentLegendId ).chaptersCount)
 
 
 			Router.go('legendEdit', {_id: currentLegendId});

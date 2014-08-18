@@ -1,2 +1,18 @@
 <template name="dashboardHome">
+
+	{{#if legendExists}}
+
+		{{> legendManagement}}
+
+	{{else}}
+
+		<a href="{{pathFor 'legendCreate'}}">
+			<button class="btn btn-primary">
+				<i class="fa fa-icon-plus-sign-alt"></i>
+				<br>
+				Create Your First Legend!
+			</button>
+		</a>
+
+	{{/if}}
 </template>

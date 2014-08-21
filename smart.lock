@@ -7,7 +7,8 @@
       "glDatePicker": {},
       "tinycolor": {},
       "font-awesome": {},
-      "houston": {}
+      "houston": {},
+      "accounts-ui-bootstrap-dropdown": {}
     },
     "packages": {
       "iron-router": {
@@ -39,6 +40,11 @@
         "git": "https://github.com/gterrono/houston.git",
         "tag": "v1.0.7",
         "commit": "a27e9e42d03764f09a6681a98945787fe1f6303d"
+      },
+      "accounts-ui-bootstrap-dropdown": {
+        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
+        "tag": "v0.8.3",
+        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

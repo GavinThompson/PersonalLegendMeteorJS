@@ -12,4 +12,5 @@ glDatePicker
 tinycolor
 font-awesome
 houston
-accounts-ui
+accounts-base
+accounts-ui-bootstrap-dropdown

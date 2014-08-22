@@ -15,3 +15,5 @@
 /iron-core
 /iron-dynamic-template
 /underscore-string-latest
+/aws-sdk
+/blocking

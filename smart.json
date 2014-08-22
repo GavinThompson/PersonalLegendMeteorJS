@@ -6,6 +6,7 @@
     "tinycolor": {},
     "font-awesome": {},
     "houston": {},
-    "accounts-ui-bootstrap-dropdown": {}
+    "accounts-ui-bootstrap-dropdown": {},
+    "aws-sdk": {}
   }
 }

@@ -8,7 +8,8 @@
       "tinycolor": {},
       "font-awesome": {},
       "houston": {},
-      "accounts-ui-bootstrap-dropdown": {}
+      "accounts-ui-bootstrap-dropdown": {},
+      "aws-sdk": {}
     },
     "packages": {
       "iron-router": {
@@ -46,6 +47,11 @@
         "tag": "v0.8.3",
         "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
       },
+      "aws-sdk": {
+        "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
+        "tag": "v2.0.14-1",
+        "commit": "8f4a0ee6f8a395fb2b4a48d358520bd50b96dafa"
+      },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",
         "tag": "v0.2.0",
@@ -55,6 +61,11 @@
         "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
         "tag": "v0.2.2",
         "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
+      },
+      "blocking": {
+        "git": "https://github.com/peerlibrary/meteor-blocking.git",
+        "tag": "v0.4.1",
+        "commit": "512354e9721d931c7884b56fbb3b419d060ae8da"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

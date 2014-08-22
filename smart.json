@@ -8,6 +8,7 @@
     "houston": {},
     "accounts-ui-bootstrap-dropdown": {},
     "aws-sdk": {},
-    "s3": {}
+    "s3": {},
+    "dotenv": {}
   }
 }

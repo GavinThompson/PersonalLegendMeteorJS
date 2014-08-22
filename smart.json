@@ -7,6 +7,7 @@
     "font-awesome": {},
     "houston": {},
     "accounts-ui-bootstrap-dropdown": {},
-    "aws-sdk": {}
+    "aws-sdk": {},
+    "s3": {}
   }
 }

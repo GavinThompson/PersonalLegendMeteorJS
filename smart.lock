@@ -9,7 +9,8 @@
       "font-awesome": {},
       "houston": {},
       "accounts-ui-bootstrap-dropdown": {},
-      "aws-sdk": {}
+      "aws-sdk": {},
+      "s3": {}
     },
     "packages": {
       "iron-router": {
@@ -51,6 +52,11 @@
         "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
         "tag": "v2.0.14-1",
         "commit": "8f4a0ee6f8a395fb2b4a48d358520bd50b96dafa"
+      },
+      "s3": {
+        "git": "https://github.com/Lepozepo/S3.git",
+        "tag": "v2.1.4",
+        "commit": "a908757c061bd9cec24b470b1d7208284165c72e"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

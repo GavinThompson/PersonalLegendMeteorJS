@@ -4,13 +4,14 @@
     "glDatePicker": {},
     "tinycolor": {},
     "font-awesome": {},
-    "accounts-ui-bootstrap-dropdown": {},
     "aws-sdk": {},
     "s3": {},
     "dotenv": {},
     "iron-router": "0.8.2",
-    "houston":{
-      "git":"git@github.com:gterrono/houston.git"
-    }
+    "houston": {
+      "git": "git@github.com:gterrono/houston.git"
+    },
+    "bootstrap-3": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }

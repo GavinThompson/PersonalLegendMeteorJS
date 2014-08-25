@@ -6,7 +6,6 @@
       "glDatePicker": {},
       "tinycolor": {},
       "font-awesome": {},
-      "accounts-ui-bootstrap-dropdown": {},
       "aws-sdk": {},
       "s3": {},
       "dotenv": {},
@@ -16,7 +15,9 @@
       "houston": {
         "git": "git@github.com:gterrono/houston.git",
         "branch": "master"
-      }
+      },
+      "bootstrap-3": {},
+      "accounts-ui-bootstrap-3": {}
     },
     "packages": {
       "spin": {
@@ -38,11 +39,6 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
-      },
-      "accounts-ui-bootstrap-dropdown": {
-        "git": "https://github.com/erobit/meteor-accounts-ui-bootstrap-dropdown.git",
-        "tag": "v0.8.3",
-        "commit": "a7af8a52e4e74db020a69b158a8f992797b8b0b0"
       },
       "aws-sdk": {
         "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
@@ -68,6 +64,16 @@
         "git": "git@github.com:gterrono/houston.git",
         "branch": "master",
         "commit": "43ce6b667f75b82395fe057541a34de414e4501f"
+      },
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v3.2.0-1",
+        "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
+      },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.3.5",
+        "commit": "bbd0a8a46ae02526c2ebfee05fa8075d8d04a9ba"
       },
       "blocking": {
         "git": "https://github.com/peerlibrary/meteor-blocking.git",

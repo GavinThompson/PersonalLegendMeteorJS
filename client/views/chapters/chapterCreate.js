@@ -17,6 +17,7 @@ Template.chapterCreate.events({
 		var $body = $(e.target).find('[name=body]');
 		var $dateSpan = $(e.target).find('[name=dateSpan]');
 		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		
 
 
 		var chapter = {
@@ -24,6 +25,7 @@ Template.chapterCreate.events({
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
 			backgroundColour: $backgroundColour.val(),
+			uploadImg: null,
 	    	legendId: template.data._id
 	    };
 

@@ -17,6 +17,7 @@ Template.chapterCreate.events({
 		var $body = $(e.target).find('[name=body]');
 		var $dateSpan = $(e.target).find('[name=dateSpan]');
 		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		
 
 
 		var chapter = {
@@ -24,6 +25,7 @@ Template.chapterCreate.events({
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
 			backgroundColour: $backgroundColour.val(),
+			uploadedImgURL: null,
 	    	legendId: template.data._id
 	    };
 
@@ -38,8 +40,10 @@ Template.chapterCreate.events({
 					Router.go('legendEdit', {_id: error.details})
 				}
 			}else{
+				console.log("chapterId")
+				console.log(chapterId)
 	        	// else go to page
-				Router.go('legendEdit', {_id: template.data._id});
+				Router.go('chapterAddImage', {_legendId: template.data._id, _id: chapterId});
 	      	}
 		});
 	}

@@ -25,7 +25,7 @@ Template.chapterCreate.events({
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
 			backgroundColour: $backgroundColour.val(),
-			uploadImg: null,
+			uploadedImgURL: null,
 	    	legendId: template.data._id
 	    };
 
@@ -40,8 +40,10 @@ Template.chapterCreate.events({
 					Router.go('legendEdit', {_id: error.details})
 				}
 			}else{
+				console.log("chapterId")
+				console.log(chapterId)
 	        	// else go to page
-				Router.go('legendEdit', {_id: template.data._id});
+				Router.go('chapterAddImage', {_legendId: template.data._id, _id: chapterId});
 	      	}
 		});
 	}

@@ -16,5 +16,42 @@ Meteor.methods({
     	console.log(context.data)
     	console.log(context._id)
         console.log('Add '+url+' to the id of '+context);
+
+
+            var currentChapterId = context._id;
+            console.log("currentChapterId")
+            console.log(currentChapterId)
+            var currentLegendId = context.legendId;
+            console.log("currentLegendId")
+            console.log(currentLegendId)
+
+        	var amazonS3Url = url;
+        	console.log("amazonS3Url")
+        	console.log(amazonS3Url)
+
+        	var chapterProperties = {
+        		uploadedImgURL: amazonS3Url
+            };
+
+            console.log("chapterProperties")
+            console.log(chapterProperties)
+         
+        	Chapters.update(currentChapterId, 
+        		{$set:
+        			chapterProperties
+        		},	
+        		function(error){ 
+        			if(error){
+        		        // display the error to the user
+        				alert(error.reason); 
+        			}else{
+        				console.log("no errors?")
+        		        // Router.go('legendEdit', {_id: currentLegendId});
+        		        Session.set("amazonS3UrlSaved", "true");
+        		        console.log("Redirected??")
+                	}
+        		}
+        	); 
+
     }
 });

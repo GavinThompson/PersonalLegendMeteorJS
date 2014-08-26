@@ -1,0 +1,38 @@
+<template name="chapterAddImage">
+
+  	<h2>Would you like to add an image to this chapter??</h2>
+  	  	<form name="chapter" class="chapter-form">
+  	 		
+  	     <div class="control-group">
+            <div class="controls">
+                <label for="uploadImg">
+                    Add an image to this post!
+                </label>
+
+                {{#S3 callback="s3ChapterImageCallback"}}
+                    <input type="file" name="uploadImg">
+                {{/S3}}
+            </div>
+        </div>
+  	    	
+          <br>
+          
+  	    	<!-- <div class="control-group">
+  	        	<div class="controls">
+  	            	<button type="submit" class="btn">
+  	            		 Add Image
+  	            	</button>
+  	        	</div>
+  	    	</div> -->
+
+          <div class="control-group">
+              <div class="controls">
+                  <a class="btn btn-danger delete" href="{{pathFor 'legendEdit'}}">
+                      No I don't want to upload an image!
+                  </a>
+              </div>
+          </div>
+  	  	
+  	  	</form>
+
+</template>

@@ -1,9 +1,70 @@
 	
+@import url(http://fonts.googleapis.com/css?family=Lustria);
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif);
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 #legendPage{
 	margin: 0; 
 	text-align: center;
+
+	-ms-word-break: break-all;
+	word-break: break-all;
+
+	/* Non standard for webkit */
+	word-break: break-word;
+
+	/*For hyphenation*/
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+
+	text-justify: auto;
 }
+
+#legendPage h1,
+#legendPage h2,
+#legendPage h3,
+#legendPage h4,
+#legendPage h5,
+#legendPage h6{
+	font-family: 'Lustria', serif;
+	/*font-family: 'Noto Serif', serif;*/
+}
+
+#legendPage,
+#legendPage p,
+#legendPage li,
+#legendPage div{
+	font-family: 'Lato', sans-serif;
+	font-size: 21px;
+	line-height: 1.1em;
+	letter-spacing: 2px;
+
+}
+
+#legendPage h1{
+	font-size: 36px;
+}
+#legendPage h2{
+	font-size: 32px;
+}
+#legendPage h3{
+	font-size: 28px;
+}
+#legendPage h4{
+	font-size: 24px;
+}
+#legendPage h5{
+	font-size: 21px;
+}
+#legendPage h6{
+	font-size: 19px;
+}
+
+
+
 
 /*LEGENDSUMMARY*/
 

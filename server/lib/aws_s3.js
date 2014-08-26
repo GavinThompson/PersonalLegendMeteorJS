@@ -36,6 +36,8 @@ Meteor.methods({
             console.log("chapterProperties")
             console.log(chapterProperties)
          
+
+         // INSTEAD OF SAVING TO CHAPTER - SAVE TO IT'S OWN COLLECTION -- RE-EVALUATE AFTER OKAY GROW PACKAGE AVAILABLE
         	Chapters.update(currentChapterId, 
         		{$set:
         			chapterProperties

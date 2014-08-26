@@ -1,16 +1,20 @@
 <template name="chapter">
 	<div class="chapter" id="marker{{indexInc}}">
-		<div class="contentHeader">
-			<h4>
-				<span class="subtitle">{{subtitle}}</span>
-					on 
-				<span class="date">{{dateSpan}}</span>
-			</h4>
+		<div class="contentHeader row">
+			<div class="col-md-offset-2 col-md-8">
+				<h4>
+					<span class="subtitle">{{subtitle}}</span>
+						on 
+					<span class="date">{{dateSpan}}</span>
+				</h4>
+			</div>
 		</div>
-
-		<div class="content"  data-bottom-center="background-color:rgb(145,145,145);" data--100-top="background-color:{{bkgColour}};">
-			<h3>{{dataTop}}</h3>
-			<p>{{breaklines body}}</p>
-		</div>
+		
+			<div class="content row" data-bottom-center="background-color:rgb(145,145,145);" data--100-top="background-color:{{bkgColour}};">
+				<div class="col-md-offset-2 col-md-8">
+					<h3>{{dataTop}}</h3>
+					<p>{{breaklines body}}</p>
+				</div>
+			</div>
 	</div>
 </template>

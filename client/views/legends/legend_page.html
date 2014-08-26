@@ -1,29 +1,36 @@
 <template name="legendPage">
 	<div id="legendPage">
 
-        <div id="legendSummary">
-	  		<div class="contentHeader">
-		    	<h4>
-		      		<span class="title">{{title}}</span>
-		      		<span class="author">on {{author}}</span>
-				</h4>
+        <div id="legendSummary" class="container-fluid">
+
+        	<div class="row contentHeader">
+		  		<div class="col-md-offset-2 col-md-8">
+			    	<h4>
+			      		<span class="title">{{title}}</span>
+			      		<span class="author">on {{author}}</span>
+					</h4>
+				</div>
 			</div>
-			<div class="summaryContent">
-      		    <p>
-                	{{synopsis}}
-      		    </p>
-      		    <p>
-                	<!-- {{legendFirstDate}} -->
-	                <!-- date[0] - date[last]  -->
-      		    </p>
-      		</div>
+			<div class="row">
+				<div class="summaryContent col-md-offset-2 col-md-8">
+	      		    <p>
+	                	{{synopsis}}
+	      		    </p>
+	      		    <p>
+	                	<!-- {{legendFirstDate}} -->
+		                <!-- date[0] - date[last]  -->
+	      		    </p>
+	      		</div>
+	      	</div>
    		 </div>
 		
-		<div class="transitionDiv">
+		<div class="row">
+			<div class="transitionDiv">
 			<!-- Perhaps a shimmering gradient? -->
+			</div>
 		</div>
 
-		<div id="chapters">
+		<div id="chapters" class="container-fluid">
 			{{#each chapters}}
 		        {{> chapter}}
 			{{/each}}

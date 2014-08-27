@@ -3,21 +3,10 @@
   "dependencies": {
     "basePackages": {
       "spin": {},
-      "glDatePicker": {},
-      "tinycolor": {},
       "font-awesome": {},
-      "aws-sdk": {},
       "s3": {},
       "dotenv": {},
-      "iron-router": {
-        "version": "0.8.2"
-      },
-      "houston": {
-        "git": "git@github.com:gterrono/houston.git",
-        "branch": "master"
-      },
-      "bootstrap-3": {},
-      "accounts-ui-bootstrap-3": {}
+      "bootstrap-3": {}
     },
     "packages": {
       "spin": {
@@ -25,25 +14,10 @@
         "tag": "v2.0.4",
         "commit": "f7b1e12a7caff1283cdb3671a393c182d0ae9862"
       },
-      "glDatePicker": {
-        "git": "https://github.com/properapp/glDatePicker.git",
-        "tag": "v0.1.0",
-        "commit": "16c95d1f939fe35ebb7ede245f0fbfd57e38df9f"
-      },
-      "tinycolor": {
-        "git": "https://github.com/kidovate/meteor-tinycolor.git",
-        "tag": "v0.9.17",
-        "commit": "3895f74e7841027f88f87e134e6400378f6f5b34"
-      },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
-      },
-      "aws-sdk": {
-        "git": "https://github.com/peerlibrary/meteor-aws-sdk.git",
-        "tag": "v2.0.14-1",
-        "commit": "8f4a0ee6f8a395fb2b4a48d358520bd50b96dafa"
       },
       "s3": {
         "git": "https://github.com/Lepozepo/S3.git",
@@ -55,65 +29,10 @@
         "tag": "v0.1.1",
         "commit": "5205300e55fe051f3a4b23dce81295571bd85e89"
       },
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.8.2",
-        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
-      },
-      "houston": {
-        "git": "git@github.com:gterrono/houston.git",
-        "branch": "master",
-        "commit": "43ce6b667f75b82395fe057541a34de414e4501f"
-      },
       "bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
         "tag": "v3.2.0-1",
         "commit": "17a63902fc6cf1096c5289d963c66cf28b474727"
-      },
-      "accounts-ui-bootstrap-3": {
-        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
-        "tag": "v0.3.5",
-        "commit": "bbd0a8a46ae02526c2ebfee05fa8075d8d04a9ba"
-      },
-      "blocking": {
-        "git": "https://github.com/peerlibrary/meteor-blocking.git",
-        "tag": "v0.4.1",
-        "commit": "512354e9721d931c7884b56fbb3b419d060ae8da"
-      },
-      "iron-layout": {
-        "git": "https://github.com/EventedMind/iron-layout.git",
-        "tag": "v0.2.0",
-        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
-      },
-      "paginated-subscription": {
-        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.2.2",
-        "commit": "2133a2163575f569f90253f81314f21b2bf08d20"
-      },
-      "bootstrap-flatly": {
-        "git": "https://github.com/grokbot/meteor-bootstrap-flatly",
-        "branch": "font-awesome",
-        "commit": "236463a6dbfb0bc07cbf81d8342dc8d6e9a06fdf"
-      },
-      "blaze-layout": {
-        "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.5",
-        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
-      },
-      "iron-core": {
-        "git": "https://github.com/EventedMind/iron-core.git",
-        "tag": "v0.2.0",
-        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
-      },
-      "iron-dynamic-template": {
-        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
-        "tag": "v0.2.1",
-        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
-      },
-      "fontawesome4": {
-        "git": "https://github.com/chrismbeckett/meteor-fontawesome4.git",
-        "tag": "v1.1.0",
-        "commit": "7d2cb9119b7981b8f854b7051d302d4842311249"
       }
     }
   }

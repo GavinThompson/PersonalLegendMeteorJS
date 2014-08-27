@@ -1,17 +1,9 @@
 {
   "packages": {
     "spin": {},
-    "glDatePicker": {},
-    "tinycolor": {},
     "font-awesome": {},
-    "aws-sdk": {},
     "s3": {},
     "dotenv": {},
-    "iron-router": "0.8.2",
-    "houston": {
-      "git": "git@github.com:gterrono/houston.git"
-    },
-    "bootstrap-3": {},
-    "accounts-ui-bootstrap-3": {}
+    "bootstrap-3": {}
   }
 }

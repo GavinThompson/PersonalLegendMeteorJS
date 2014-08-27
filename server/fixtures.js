@@ -65,3 +65,115 @@ if (Legends.find().count() === 0) {
 	}); 
 }
 
+
+// CHAPTER THEME
+if (Themes.find().count() === 0) { 
+
+	Themes.insert({
+		name: "White",
+		backgroundColour: "#FFF",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "OffWhite",
+		backgroundColour: "#F2F2F2",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Gray20",
+		backgroundColour: "#333",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Pink/GrayBlack",
+		backgroundColour: "#E5BDDC",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Ghostwhite",
+		backgroundColour: "#FFF",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "FlatNavy",
+		backgroundColour: "#434658",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Violet/White",
+		backgroundColour: "rgb(208,194,220)",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Lavender/GrayBlack",
+		backgroundColour: "rgb(226,216,236)",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "FlatPastelBlue/White",
+		backgroundColour: "#81B3CC",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "SalmonPeach/GrayBlack",
+		backgroundColour: "#FFE5E2",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Mint/GrayBlack",
+		backgroundColour: "#8FF2D9",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Rosee/White",
+		backgroundColour: "#BF5B6E",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Beige/GrayBlack",
+		backgroundColour: "#F4E9CD",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "Sand/White",
+		backgroundColour: "#BF9A5B",
+		fontColour: "#FFF",
+		texture: null
+	}); 
+
+	Themes.insert({
+		name: "PaleYellow/GrayBlack",
+		backgroundColour: "#FBFDC1",
+		fontColour: "#555",
+		texture: null
+	}); 
+
+
+
+}

@@ -26,10 +26,23 @@
         	</div>
     	</div>
 
-        <div class="control-group">
+        <!-- <div class="control-group">
             <div class="controls">
                 <label for="backgroundColour">Select a background colour for this object:</label>
                 <input type="color" name="backgroundColour">
+            </div>
+        </div> -->
+
+        <div class="control-group">
+            <div class="controls">
+                <label for="chapterThemeId">Select a background colour for this object:</label>
+                <select class="form-control" name="chapterThemeId">
+
+                    {{#each themeOptions}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+                    
+                </select>
             </div>
         </div>
     	

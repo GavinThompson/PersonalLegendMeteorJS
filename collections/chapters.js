@@ -4,7 +4,7 @@ Chapters = new Meteor.Collection('chapters');
 Chapters.deny({
 	update: function(userId, chapter, fieldNames) {
 	    // may only edit the following two fields:
-		return (_.without(fieldNames, 'subtitle', 'body', 'dateSpan', 'chapterTheme').length > 0); 
+		return (_.without(fieldNames, 'subtitle', 'body', 'dateSpan', 'chapterThemeId').length > 0); 
 		// REVIEW WHAT THE ABOVE DOES IN Discover Meteor
 	}
 });
@@ -37,7 +37,7 @@ Meteor.methods({
 			subtitle: chapterAttributes.subtitle,
 			body: chapterAttributes.body,
 			dateSpan: chapterAttributes.dateSpan,
-			chapterTheme: chapterAttributes.chapterTheme,
+			chapterThemeId: chapterAttributes.chapterThemeId,
 			submitted: new Date().getTime()
 		});
 

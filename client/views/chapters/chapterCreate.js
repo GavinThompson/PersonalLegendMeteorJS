@@ -7,6 +7,14 @@
 	// Above causing error... not sure why
 // }
 
+Template.chapterCreate.helpers({ 
+	
+	themeOptions: function() {
+		return Themes.find().fetch()
+	}
+
+})
+
 Template.chapterCreate.events({
 
 
@@ -16,7 +24,8 @@ Template.chapterCreate.events({
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
 		var $dateSpan = $(e.target).find('[name=dateSpan]');
-		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		// var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		var $chapterThemeId = $(e.target).find('[name=chapterThemeId]');
 		
 
 
@@ -24,7 +33,8 @@ Template.chapterCreate.events({
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
-			backgroundColour: $backgroundColour.val(),
+			// backgroundColour: $backgroundColour.val(),
+			chapterThemeId: $chapterThemeId.val(),
 			uploadedImgURL: null,
 	    	legendId: template.data._id
 	    };

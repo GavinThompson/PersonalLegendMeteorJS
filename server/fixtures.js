@@ -91,7 +91,7 @@ if (Themes.find().count() === 0) {
 	}); 
 
 	Themes.insert({
-		name: "Pink/GrayBlack",
+		name: "Pink",
 		backgroundColour: "#E5BDDC",
 		fontColour: "#555",
 		texture: null
@@ -112,63 +112,63 @@ if (Themes.find().count() === 0) {
 	}); 
 
 	Themes.insert({
-		name: "Violet/White",
+		name: "Violet",
 		backgroundColour: "rgb(208,194,220)",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "Lavender/GrayBlack",
+		name: "Lavender",
 		backgroundColour: "rgb(226,216,236)",
 		fontColour: "#555",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "FlatPastelBlue/White",
+		name: "FlatPastelBlue",
 		backgroundColour: "#81B3CC",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "SalmonPeach/GrayBlack",
+		name: "SalmonPeach",
 		backgroundColour: "#FFE5E2",
 		fontColour: "#555",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "Mint/GrayBlack",
+		name: "Mint",
 		backgroundColour: "#8FF2D9",
 		fontColour: "#555",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "Rosee/White",
+		name: "Rosee",
 		backgroundColour: "#BF5B6E",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "Beige/GrayBlack",
+		name: "Beige",
 		backgroundColour: "#F4E9CD",
 		fontColour: "#555",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "Sand/White",
+		name: "Sand",
 		backgroundColour: "#BF9A5B",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
 	Themes.insert({
-		name: "PaleYellow/GrayBlack",
+		name: "PaleYellow",
 		backgroundColour: "#FBFDC1",
 		fontColour: "#555",
 		texture: null

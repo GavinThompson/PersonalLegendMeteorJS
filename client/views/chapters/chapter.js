@@ -1,5 +1,23 @@
 Template.chapter.helpers({
 
+	chapterThemeClass: function(){
+		
+		fetchedTheme = Themes.find({_id: this.chapterThemeId}).fetch()
+		return fetchedTheme[0].name
+	},
+
+	chapterThemeBackgroundColour: function(){
+		
+		fetchedTheme = Themes.find({_id: this.chapterThemeId}).fetch()
+		return fetchedTheme[0].backgroundColour
+	},
+
+	chapterThemeFontColour: function(){
+		
+		fetchedTheme = Themes.find({_id: this.chapterThemeId}).fetch()
+		return fetchedTheme[0].fontColour
+	},
+
 	submittedText: function() {
 		return new Date(this.submitted).toString(); 
 	},

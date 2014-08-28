@@ -127,3 +127,61 @@
 	#chapters .chapter p:last-child {
 	  margin-bottom: 0 
 	}
+
+/* ==========================================================================
+   Parallax 
+   ========================================================================== */
+.parallax {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+	.parallax-background {
+	  width: 100%;
+	  height: 100%;
+	  background-size: cover;
+	  background-attachment: fixed;
+	}
+
+	/*
+	MOVED THIS TO RENDER INLINE STYLE ON CHAPTER TEMPLATE
+	.parallax-background1 {
+	  background-image: url(../img/backgrounds/4.png);
+	}*/
+
+
+.parallax-content{
+  margin:100px 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+
+.parallax-content blockquote{
+   border:none;
+   font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.parallax-content blockquote footer{
+   padding:10px 0;
+   font-size: 1em;
+   font-style:italic;
+   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+   text-transform:none;
+}
+
+.overlay {
+  /*background: url(../img/overlays/05.png);*/
+  /*background: #d3d3d3;*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}

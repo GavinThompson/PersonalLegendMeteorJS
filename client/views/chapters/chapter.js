@@ -35,19 +35,30 @@ Template.chapter.helpers({
 
 	contentTop: 0,
 
-	bkgColour: function(){
-		hex = this.backgroundColour.substring(0, 7)
-		// return hex
-		console.log("hex")
-		console.log(hex)
-		
-		colour1 = tinycolor(hex)
-
-		colourRGB = colour1.toRgbString()
-		console.log(colourRGB)	
-
-		return colourRGB
+	chapterImage: function() {
+		// TEMPORARY - NEEDS TO BE REPLACED WHEN USERS CAN UPLOAD PHOTOS - CURRENTLY THROWS IN STOCK PHOTO FROM PUBLIC FOLDER
+		minNumber = 1
+		maxNumber = 15
+		randNumber = Math.floor(Math.random()*(maxNumber-minNumber+1)+minNumber) 
+		return randNumber
+		// FUNCTION GENERATES INTEGER 1-15 RANDOMLY to pull utilize /public/images/stock/7.jpg for example -- code currently inline style
 	}
+
+	// bkgColour: function(){
+	// 	hex = this.backgroundColour.substring(0, 7)
+	// 	// return hex
+	// 	console.log("hex")
+	// 	console.log(hex)
+		
+	// 	colour1 = tinycolor(hex)
+
+	// 	colourRGB = colour1.toRgbString()
+	// 	console.log(colourRGB)	
+
+	// 	return colourRGB
+	// },
+
+
 	
 });
 

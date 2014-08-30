@@ -1,34 +1,19 @@
 <template name="chapter">
 	<div class="chapter" id="marker{{indexInc}}">
-		<div class="row contentHeader">
-			<div class="col-md-offset-2 col-md-8">
-				<h4>
-					<span class="subtitle">{{subtitle}}</span>
-						on 
-					<span class="date">{{dateSpan}}</span>
-				</h4>
+		<div class="row parallax">
+			<div class="col-md-12 parallax-image" style="background-image: url(/images/stock/{{chapterImage}}.jpg);">
+				<div class="parallax-content">
+					<h1 class="date">
+						{{dateSpan}}
+					</h1>
+					<h3 class="subtitle">
+						{{subtitle}}
+					</h3>
+				</div>
+				<!-- <div class="overlay"></div> -->
 			</div>
 		</div>
-
-		<!-- <div class="row parallax parallax-background" style="background-image: url(/images/stock/{{chapterImage}}.jpg);"> -->
-			<div class="row parallax">
-			<!-- <div class="gradientOverlayDiagTopBottomSlashes"></div> -->
-			<div class="overlay"></div>
-			
-					<div class="col-md-12 parallax-background" style="background-image: url(/images/stock/{{chapterImage}}.jpg);">
-						<div class="parallax-content">
-							<!-- <blockquote>
-								<i class="fa fa-quote-left"></i> You can only have fun helping other people have fun if you're having fun doing it. <i class="fa fa-quote-right"></i>
-								<footer>- Bernie DeKoven</footer>
-							</blockquote> -->
-						</div>
-					<!-- </div> -->
-				</div>
-		</div>
-		
-		<!-- <div class="content row" data-bottom-center="background-color:rgb(145,145,145);" data- -100-top="background-color:{{bkgColour}};"> -->
-		
-
+						
 		<div class="row content {{chapterThemeClass}}" style="background-color: {{chapterThemeBackgroundColour}}; color: {{chapterThemeFontColour}}">
 			<div class="col-md-offset-2 col-md-8">
 				<h3>{{dataTop}}</h3>
@@ -37,3 +22,6 @@
 		</div>
 	</div>
 </template>
+
+<!-- SKROLLR CODE EXAMPLE  -->
+<!-- <div class="content row" data-bottom-center="background-color:rgb(145,145,145);" data- -100-top="background-color:{{bkgColour}};"> -->

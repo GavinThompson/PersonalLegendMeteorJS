@@ -68,5 +68,9 @@ Template.chapter.rendered = function() {
     // Anything here will get executed right when the template
     // is finished rendering.
 
+
+    $('.parallax').parallax("50%", 0.8);
+    $('.parallax-content').parallax("50%", 0.3);
+
     console.log( "test.....")
 };

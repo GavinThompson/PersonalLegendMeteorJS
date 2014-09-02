@@ -16,6 +16,7 @@ deps@1.0.1
 ejson@1.0.0
 email@1.0.2
 follower-livedata@1.0.0
+font-awesome@0.0.0
 geojson-utils@1.0.0
 handlebars@1.0.0
 html-tools@1.0.0
@@ -37,7 +38,6 @@ minifiers@1.0.2
 minimongo@1.0.1
 mizzao:bootstrap-3@3.2.0
 mongo-livedata@1.0.3
-natestrauser:font-awesome@4.1.0
 npm-bcrypt@0.7.7
 observe-sequence@1.0.1
 ordered-dict@1.0.0

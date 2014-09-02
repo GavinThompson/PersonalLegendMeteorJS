@@ -1,0 +1,30 @@
+<template name="manageLegendListItem">
+	<li>
+        <a href="#" class="sidebar-nav-submenu">
+            <i class="fa fa-book sidebar-nav-icon"></i>
+        	<i class="fa fa-chevron-left sidebar-nav-indicator"></i>
+            {{title}}
+        </a>
+        <ul>
+            <li>
+                <a href="{{pathFor 'legendPage'}}">
+                    <i class="fa fa-file-text-o sidebar-nav-icon"></i>
+                    View Legend
+                </a>
+            </li>
+            <li>
+                <a href="{{pathFor 'legendEdit'}}">
+                    <i class="fa fa-edit sidebar-nav-icon"></i>
+                    Edit Details
+                </a>
+            </li>
+            <li>
+                <a href="{{pathFor 'root'}}">
+                <!-- <a href="{{pathFor 'chaptersShow'}}"> -->
+                    <i class="fa fa-magic sidebar-nav-icon"></i>
+                    Edit Chapters*
+                </a>
+            </li>
+        </ul>
+    </li>
+</template>

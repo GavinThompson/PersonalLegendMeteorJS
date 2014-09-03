@@ -1,0 +1,33 @@
+<template name="pageNotFound">
+
+	<!-- Full Background -->
+	<!-- For best results use an image with a resolution of 1280x1280 pixels (prefer a blurred image for smaller file size) -->
+	<img src="img/placeholders/layout/error_full_bg.jpg" alt="Full Background" class="full-bg full-bg-bottom animation-pulseSlow">
+	<!-- END Full Background -->
+
+	<!-- Error Container -->
+	<div id="error-container">
+	    <div class="row text-center">
+	        <div class="col-md-6 col-md-offset-3">
+	            <h1 class="text-light animation-fadeInQuick"><strong>Feeling Lost?</strong></h1>
+	            <h2 class="text-muted animation-fadeInQuickInv"><em>Sorry but we couldn't find that page... :(</em></h2>
+	        </div>
+	        <div class="col-md-4 col-md-offset-4">
+	            
+				<!-- SEARCH FORM TO BE IMPLEMENTED LATER -->
+
+	            <!-- <form action="page_ready_search_results.html" method="post" class="push">
+	                <div class="input-group input-group-lg">
+	                    <input type="text" id="search-term" name="search-term" class="form-control" placeholder="Search AppUI..">
+	                    <div class="input-group-btn">
+	                        <button type="submit" class="btn btn-effect-ripple btn-primary"><i class="fa fa-search"></i></button>
+	                    </div>
+	                </div>
+	            </form> -->
+	            <a href="{{ pathFor weHaveToGoBackJack }}" class="btn btn-effect-ripple btn-primary"><i class="fa fa-arrow-left"></i> Go back</a>
+	        </div>
+	    </div>
+	</div>
+	<!-- END Error Container -->
+
+</template>

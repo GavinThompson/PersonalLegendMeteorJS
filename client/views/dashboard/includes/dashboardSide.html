@@ -43,13 +43,13 @@
                         <i class="fa fa-ellipsis-h"></i>
                     </li>
                     <li>
-                        <a href="{{pathFor 'profileShow'}}">
+                        <a href="{{pathFor 'profileShow' username=currentUsername}}">
                             <i class="fa fa-user sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{pathFor 'profileEdit'}}">
+                        <a href="{{pathFor 'profileEdit' username=currentUsername}}">
                             <i class="fa fa-cogs sidebar-nav-icon"></i>
                             <span class="sidebar-nav-mini-hide">Account Settings</span>
                         </a>

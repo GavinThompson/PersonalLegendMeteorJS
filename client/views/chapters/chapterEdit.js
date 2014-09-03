@@ -1,10 +1,29 @@
+
+Template.chapterEdit.rendered = function() {
+	// Fancy dropdown "chosen" 
+	$('.select-chosen').chosen({width: "100%"});
+
+	// Date picker
+	$('.input-datepicker, .input-daterange').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });
+}
+
+
 Template.chapterEdit.helpers({ 
-	// 
-	testyyyy: function(){
-		stringy = this.body
-		splitty = stringy.replace(/\n/g,"<br>")
-		console.log(splitty)
-	}
+
+	themeOptions: function() {
+		return Themes.find().fetch()
+	},
+
+	currentUsername: function() {
+		currentUser = Meteor.users.findOne( Meteor.userId() );
+		if (currentUser) {
+			username = currentUser.username;
+		}else{
+			username = null
+		}
+		return username;
+	} 
+
 });
 
 
@@ -21,15 +40,17 @@ Template.chapterEdit.events({
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
 		var $dateSpan = $(e.target).find('[name=dateSpan]');
-		var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		// var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		var $chapterThemeId = $(e.target).find('[name=chapterThemeId]');
 
 
 		var chapterProperties = {
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
-			backgroundColour: $backgroundColour.val(),
-	    	// legendId: this.legendId
+			// backgroundColour: $backgroundColour.val(),
+			chapterThemeId: $chapterThemeId.val(),
+			uploadedImgURL: null,
 	    };
   
 		Chapters.update(currentChapterId, 

@@ -1,17 +1,28 @@
 
-// Template.chapterCreate.rendered = function() {
-	// console.log("chapterCreate rendered....")
-	// console.log( $(".datepicker") )
-	
-	// $(".datepicker").glDatePicker(); 
-	// Above causing error... not sure why
-// }
+Template.chapterCreate.rendered = function() {
+	// Fancy dropdown "chosen" 
+	$('.select-chosen').chosen({width: "100%"});
+
+	// Date picker
+	$('.input-datepicker, .input-daterange').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });
+}
+
 
 Template.chapterCreate.helpers({ 
 	
 	themeOptions: function() {
 		return Themes.find().fetch()
-	}
+	},
+
+	currentUsername: function() {
+		currentUser = Meteor.users.findOne( Meteor.userId() );
+		if (currentUser) {
+			username = currentUser.username;
+		}else{
+			username = null
+		}
+		return username;
+	} 
 
 })
 

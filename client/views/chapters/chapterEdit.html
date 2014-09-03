@@ -1,64 +1,75 @@
 <template name="chapterEdit">
 
-  	<h2>Edit Chapter Event</h2>
-  	  	<form name="chapter" class="chapter-form">
-  	 		
-  	        <div class="control-group">
-  	            <div class="controls">
-  	                <label for="subtitle">
-  	                	  Title of this marker
-  	                </label>
-  	                <input name="subtitle" type="text" value="{{subtitle}}">
+  	<div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <!-- Horizontal Form Block -->
+            <div class="block">
+                <!-- Horizontal Form Title -->
+                <div class="block-title">
+                    <h2>Edit Chapter: {{subtitle}}</h2>
+                </div>
+                <!-- END Horizontal Form Title -->
 
-  	            </div>
-  	        </div>
+                <!-- Horizontal Form Content -->
+                <form method="post" class="form-horizontal">
 
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="subtitle">Chapter Title</label>
+                        <div class="col-md-9">
+                            <input type="text" id="subtitle" name="subtitle" class="form-control" value="{{subtitle}}">
+                            <span class="help-block">Title of this chapter?</span>
+                        </div>
+                    </div>
 
-  	        <div class="control-group">
-  	            <div class="controls">
-                    <label for="dateSpan">
-  	                   	Pick a date for this event
-  	                </label>
-  	                <input type="date" name="dateSpan" class="datepicker" value="{{dateSpan}}">
-  	            </div>
-  	        </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" name="dateSpan">Chapter Date</label>
+                        <div class="col-md-9">
+                            <input type="text" id="dateSpan" name="dateSpan" class="form-control input-datepicker" data-date-format="mm-dd-yyyy" placeholder="mm-dd-yyyy" value="{{dateSpan}}">
+                            <span class="help-block">When did this chapter of your life take place?</span>
+                        </div>
+                    </div>
 
-  	    	<div class="control-group">
-  	        	<div class="controls">
-  	            	<label for="body">
-  	            	  	Chapter on this post
-  	            	</label>
-  	            	<textarea name="body">{{body}}</textarea>
-  	        	</div>
-  	    	</div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="synopsis">Chapter Details</label>
+                        <div class="col-md-9">
+                            <textarea id="synopsis" name="synopsis" rows="6" class="form-control" placeholder="You don't know about me without you have read a book by the name of The Adventures of {{currentUsername}}; but that ain't no matter...">{{body}}</textarea>
+                            <span class="help-block">Tell us a story about what happened during this date</span>
+                        </div>
+                    </div>
 
-  	        <div class="control-group">
-  	            <div class="controls">
-  	                <label for="backgroundColour">
-  	                	  Select a background colour for this object:
-  	                </label>
-  	                <input type="color" name="backgroundColour" value="{{backgroundColour}}">
-  	            </div>
-  	        </div>
-  	    	
-          <br>
-          
-  	    	<div class="control-group">
-  	        	<div class="controls">
-  	            	<button type="submit" class="btn">
-  	            		 Save Changes
-  	            	</button>
-  	        	</div>
-  	    	</div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="chapterThemeId">Select a colour theme for this object:</label>
+                        <div class="col-md-9">
+                            <select id="chapterThemeId" name="chapterThemeId" class="select-chosen" data-placeholder="Choose a theme..">
+                                <option></option>
+                                {{#each themeOptions}}
+                                    <!-- {{#if}} -->
+<!-- =                                      <option value="{{_id}}" selected>{{name}}</option> -->
+                                    <!-- {{else}} -->
+                                      <option value="{{_id}}">{{name}}</option>
+                                    <!-- {{/if}} -->
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
 
-          <div class="control-group">
-              <div class="controls">
-                  <a class="btn btn-danger delete" href="#">
-                          Delete Marker
-                      </a>
-              </div>
-          </div>
-  	  	
-  	  	</form>
+                    <div class="form-group form-actions">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button type="submit" class="btn btn-effect-ripple btn-primary">Submit</button>
+                            <button type="delete" class="btn btn-effect-ripple btn-danger delete">Delete</button>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- END Horizontal Form Content -->
+            </div>
+            <!-- END Horizontal Form Block -->
+        </div>
+    </div>
+
 
 </template>
+
+
+    
+

@@ -1,10 +1,3 @@
-Template.legendEdit.helpers({ 
-	chapters: function() {
-		return Chapters.find({legendId: this._id}, {sort: {dateSpan: 1}});
-	}
-});
-
-
 Template.legendEdit.events({ 
 
 	'submit form': function(e) {

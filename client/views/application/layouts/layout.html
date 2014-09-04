@@ -1,12 +1,6 @@
 <template name="layout">
-	<div class="container-fluid">
-		{{> header}}
-		{{> errors}}
-
-	    <div id="main">
-
-		    {{> yield}}
-
-    	</div>
-    </div>
+	<img src="img/placeholders/layout/lock_full_bg.jpg" alt="Full Background" class="full-bg full-bg-bottom animation-pulseSlow">
+		<div id="buffer" style="padding-top: 5%">
+			{{> yield}}
+		</div>
 </template>

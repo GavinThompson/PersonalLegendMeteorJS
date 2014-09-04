@@ -1,5 +1,3 @@
 // configuration of any client side packages
 
-/*==========================================================================
-Parallax
-===========================================================================*/
+// Accounts-Entry config in /lib/accountsEntry.js for both Client & Server

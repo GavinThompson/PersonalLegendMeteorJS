@@ -1,0 +1,46 @@
+<template name="dashboardLayout">
+
+
+	<!-- Page Wrapper -->
+	
+	<!-- <div id="page-wrapper" class="page-loading"> -->
+	<div id="page-wrapper">
+	    <div id="page-container" class="header-fixed-top sidebar-visible-lg-full">
+	        {{> dashboardSide}}
+	        <!-- Main Container -->
+	        <div id="main-container">
+	            <!-- Header -->
+	            <!-- In the PHP version you can set the following options from inc/config file -->
+	            <!--
+	                Available header.navbar classes:
+
+	                'navbar-default'            for the default light header
+	                'navbar-inverse'            for an alternative dark header
+
+	                'navbar-fixed-top'          for a top fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar())
+	                    'header-fixed-top'      has to be added on #page-container only if the class 'navbar-fixed-top' was added
+
+	                'navbar-fixed-bottom'       for a bottom fixed header (fixed main sidebar with scroll will be auto initialized, functionality can be found in js/app.js - handleSidebar()))
+	                    'header-fixed-bottom'   has to be added on #page-container only if the class 'navbar-fixed-bottom' was added
+	            -->
+	            {{> dashboardNav}}
+	            <!-- END Header -->
+
+	            <!-- Page content -->
+	            <div id="page-content">
+	            	{{> errors}}
+	            	<div class="row">
+	               	<!-- YIELD NEEDS <ROW> AS FIRST LINE -->
+		            	{{> yield}}
+		            </div>
+	                    
+	            </div>
+	            <!-- END Page Content -->
+	        </div>
+	        <!-- END Main Container -->
+	    </div>
+	    <!-- END Page Container -->
+	</div>
+	<!-- END Page Wrapper -->
+
+</template>

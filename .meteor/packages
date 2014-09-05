@@ -6,7 +6,6 @@
 standard-app-packages
 sacha:spin@2.0.4
 accounts-password
-natestrauser:font-awesome@4.1.0
 accounts-base
 accounts-t9n
 lepozepo:s3@2.1.4
@@ -15,4 +14,6 @@ iron:router
 less
 mizzao:bootstrap-3
 accounts-ui-bootstrap-3
+font-awesome
+joshowens:accounts-entry
 

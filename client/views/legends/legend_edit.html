@@ -1,55 +1,43 @@
 <template name="legendEdit">
-  	<form class="main">
-    	
-    		
-		<div class="control-group">
-    		<label class="control-label" for="title">Title</label>
-    		
-    		<div class="controls">
-        		<input name="title" type="text" value="{{title}}" placeholder="Name your legend"/>
-    		</div>
-		</div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <!-- Horizontal Form Block -->
+            <div class="block">
+                <!-- Horizontal Form Title -->
+                <div class="block-title">
+                    <h2>Edit Legend: {{title}}</h2>
+                </div>
+                <!-- END Horizontal Form Title -->
 
-        <div class="control-group">
-            <label class="control-label" for="synopsis">Synopsis</label>
-            <div class="controls">
-                <textarea name="synopsis" type="text" value="">{{synopsis}}</textarea>
+                <!-- Horizontal Form Content -->
+                <form method="post" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="title">Legend Title</label>
+                        <div class="col-md-9">
+                            <input type="text" id="title" name="title" value="{{title}}" class="form-control">
+                            <span class="help-block">What can we call your Legend?</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="synopsis">Synopsis</label>
+                        <div class="col-md-9">
+                            <textarea id="synopsis" name="synopsis" rows="7" class="form-control" placeholder="It was the best of times, it was the worst of times, these are the days of our lives...">{{synopsis}}</textarea>
+                            <span class="help-block">Write a quick summary about your Legend</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-actions">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button type="submit" class="btn btn-effect-ripple btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- END Horizontal Form Content -->
             </div>
-        </div>
-		
-		<div class="control-group">
-    		<div class="controls">
-        		<input type="submit" value="Save Changes" class="btn btn-primary submit"/>
-    		</div>
-		</div>
-		
-    	
-        <hr/>
-
-
-   		<!-- <div class="control-group">
-    		<div class="controls">
-        		<a class="btn btn-danger delete" href="#">
-                    Delete legend
-                </a>
-    		</div>
-		</div> -->
-    	
-  	</form>
-
-    
-
-    <div>
-        <a href="{{pathFor 'chapterCreate'}}" class="btn btn-success">
-            Create Chapter
-        </a>
-
-        <div id="chapterEditCards">
-            {{#each chapters}}
-                {{> chapterCard}}
-            {{/each}}
+            <!-- END Horizontal Form Block -->
         </div>
     </div>
-
-
 </template>

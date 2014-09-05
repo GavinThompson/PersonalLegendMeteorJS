@@ -1,25 +1,44 @@
 <template name="legendCreate">
-    <form class="main">
-    	
-    	<div class="control-group">
-        	<label class="control-label" for="title">Title</label>
-        	<div class="controls">
-            	<input name="title" type="text" value="" placeholder="Name your legend">
-        	</div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <!-- Horizontal Form Block -->
+            <div class="block">
+                <!-- Horizontal Form Title -->
+                <div class="block-title">
+                    <h2>Create a New Legend</h2>
+                </div>
+                <!-- END Horizontal Form Title -->
+
+                <!-- Horizontal Form Content -->
+                <form method="post" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="title">Legend Title</label>
+                        <div class="col-md-9">
+                            <input type="text" id="title" name="title" class="form-control">
+                            <span class="help-block">What can we call your Legend?</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="synopsis">Synopsis</label>
+                        <div class="col-md-9">
+                            <textarea id="synopsis" name="synopsis" rows="7" class="form-control" placeholder="It was the best of times, it was the worst of times, these are the days of our lives..."></textarea>
+                            <span class="help-block">Write a quick summary about your Legend</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-actions">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button type="submit" class="btn btn-effect-ripple btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
+                        </div>
+                    </div>
+
+                </form>
+                <!-- END Horizontal Form Content -->
+            </div>
+            <!-- END Horizontal Form Block -->
         </div>
-
-    	<div class="control-group">
-    		<label class="control-label" for="synopsis">Synopsis</label>
-    		<div class="controls">
-        		<textarea name="synopsis" type="text" value=""></textarea>
-    		</div>
-		</div>
-
-		<div class="control-group">
-    		<div class="controls">
-        		<input type="submit" value="Submit" class="btn btn-primary"/>
-    		</div>
-		</div>
-
-    </form>
+    </div>
 </template>

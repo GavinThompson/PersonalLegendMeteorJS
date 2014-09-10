@@ -19,6 +19,7 @@ follower-livedata@1.0.0
 font-awesome@0.0.0
 geojson-utils@1.0.0
 handlebars@1.0.0
+houston:admin@1.1.0
 html-tools@1.0.0
 htmljs@1.0.0
 id-map@1.0.0
@@ -61,6 +62,7 @@ srp@1.0.0
 standard-app-packages@1.0.0
 stylus@1.0.3
 templating@1.0.4
+tmeasday:paginated-subscription@0.2.0
 ui@1.0.0
 underscore@1.0.0
 webapp@1.0.2

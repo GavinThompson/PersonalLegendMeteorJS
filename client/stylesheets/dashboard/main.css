@@ -967,7 +967,7 @@ a.widget-content:active {
     right: 0;
     bottom: 0;
     padding: 15px 25px;
-    background: rgba(0, 0, 0, .65);
+    background: rgba(0, 0, 0, .35);
 }
 
 .widget-content {

@@ -1,28 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo:700);
+
 .home{
-	.header-unit {
-		height: 500px;
-		border: 1px solid #000;
-		border-right:none;
-		border-left: none;
+	.headerUnit{
 		position: relative;
-		padding: 20px;
+		height: 500px;
+		color: #454e59;
+		text-align: right;
+		#homeVideo{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.content{
+			z-index: 100;
+			margin-top: 300px;
+			h1{
+				font-size: 50px;
+				font-family: 'Arvo', serif;
+				font-weight: 700;
+			}
+			h2{ 
+				font-size: 42px;
+				// font-family: 'Arvo', serif;
+				font-weight: 700;
+			}
+		}
 	}
-	#video-container {
-		position: absolute;
-	}
-	#video-container {
-		top:0%;
-		left:0%;
-		height:100%;
-		width:100%;
-		overflow: hidden;
-	}
-	video {
-		position:absolute;
-		z-index:0;
-	}
-	video.fillWidth {
-		min-height: 500px;
-		width: 100%;
+
+
+	.tempBuffer{
+		height:50px;
 	}
 }

@@ -34,7 +34,7 @@ Template.chapterCreate.events({
 
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
-		var $dateSpan = $(e.target).find('[name=dateSpan]');
+		var $dateSpan = $("#dateSpan")
 		// var $backgroundColour = $(e.target).find('[name=backgroundColour]');
 		var $chapterThemeId = $(e.target).find('[name=chapterThemeId]');
 		
@@ -58,11 +58,11 @@ Template.chapterCreate.events({
 				throwError(error.reason); 
 				
 				if (error.error === 302){
-					Router.go('legendEdit', {_id: error.details})
+					Router.go('legendChapters', {_id: error.details})
 				}
 			}else{
-				console.log("chapterId")
-				console.log(chapterId)
+				// console.log("chapterId")
+				// console.log(chapterId)
 	        	// else go to page
 				Router.go('chapterAddImage', {_legendId: template.data._id, _id: chapterId});
 	      	}

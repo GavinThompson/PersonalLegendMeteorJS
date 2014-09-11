@@ -39,7 +39,7 @@ Template.chapterEdit.events({
 
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
-		var $dateSpan = $(e.target).find('[name=dateSpan]');
+		var $dateSpan = $("#dateSpan")
 		// var $backgroundColour = $(e.target).find('[name=backgroundColour]');
 		var $chapterThemeId = $(e.target).find('[name=chapterThemeId]');
 
@@ -62,7 +62,7 @@ Template.chapterEdit.events({
 			        // display the error to the user
 					alert(error.reason); 
 				}else{
-			        Router.go('legendEdit', {_id: currentLegendId});
+			        Router.go('legendChapters', {_id: currentLegendId});
 	        	}
 			}
 		); 
@@ -88,7 +88,7 @@ Template.chapterEdit.events({
 			console.log(Legends.findOne( currentLegendId ).chaptersCount)
 
 
-			Router.go('legendEdit', {_id: currentLegendId});
+			Router.go('legendChapters', {_id: currentLegendId});
 		}
 	}
 });

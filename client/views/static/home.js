@@ -9,6 +9,10 @@ Template.home.rendered= function() {
 		zIndex:0
 	});
 
+	$("#mostRecentLegends").carousel();
+	$("#mostViewedLegends").carousel();
+	$("#mostLovedLegends").carousel();
+	$("#mostSharedLegends").carousel();
 }
 
 

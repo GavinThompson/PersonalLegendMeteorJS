@@ -2,9 +2,12 @@
 Template.chapterEdit.rendered = function() {
 	// Fancy dropdown "chosen" 
 	$('.select-chosen').chosen({width: "100%"});
+	$('.select-chosen').val(this.data.chapterThemeId);
+	$('.select-chosen').trigger("chosen:updated")
 
 	// Date picker
 	$('.input-datepicker, .input-daterange').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });
+
 }
 
 
@@ -22,7 +25,11 @@ Template.chapterEdit.helpers({
 			username = null
 		}
 		return username;
-	} 
+	},
+
+	chosenChapterTheme: function(){
+		
+	}
 
 });
 

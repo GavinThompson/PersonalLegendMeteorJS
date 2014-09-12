@@ -8,6 +8,7 @@ Template.manageLegendList.helpers({
 Template.manageLegendList.events({
 	'click .sidebar-nav-submenu': function(e, template) {
 	    e.preventDefault();
+	    Router.go('legendManagement', {_id: this._id})
 
 		if( $(e.target).hasClass("open") ){
 			$(e.target).removeClass("open")

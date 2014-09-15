@@ -38,6 +38,7 @@ Meteor.methods({
 			body: chapterAttributes.body,
 			dateSpan: chapterAttributes.dateSpan,
 			chapterThemeId: chapterAttributes.chapterThemeId,
+			published: chapterAttributes.published,
 			submitted: new Date().getTime()
 		});
 

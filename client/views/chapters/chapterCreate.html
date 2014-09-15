@@ -49,10 +49,31 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        
+                        <label class="col-md-3 control-label">Published Status:</label>
+                        
+                        <div class="col-md-9">
+                            <div class="btn-group btn-toggle" data-toggle="buttons" id="published">
+                                <label id="publishOption" class="btn btn-sm btn-success active">
+                                  <input type="radio" name="published" value="true" checked> Publish
+                                </label>
+                                <label id="draftOption" class="btn btn-sm btn-default">
+                                  <input type="radio" name="published" value="false"> Save for Later
+                                </label>
+                              </div>
+                        </div>
+
+                    </div>
+
                     <div class="form-group form-actions">
                         <div class="col-md-9 col-md-offset-3">
-                            <button type="submit" class="btn btn-effect-ripple btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-effect-ripple btn-danger">Reset</button>
+                            <button type="submit" class="btn btn-effect-ripple btn-primary">
+                                Submit
+                            </button>
+                            <button type="reset" class="btn btn-effect-ripple btn-danger">
+                                Reset
+                            </button>
                         </div>
                     </div>
 

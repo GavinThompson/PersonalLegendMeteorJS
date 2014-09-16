@@ -1,6 +1,6 @@
 Template.legendPage.helpers({ 
 	chapters: function() {
-		return Chapters.find({legendId: this._id}, {sort: {dateSpan: 1}});
+		return Chapters.find({legendId: this._id, published: true}, {sort: {dateSpan: 1}});
 	},
 
 	legendFirstDate: function(){

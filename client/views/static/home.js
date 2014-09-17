@@ -172,46 +172,46 @@ Template.home.rendered= function() {
 	        }, s.animationTimeDelay);
 
 	    },
-	    settingOptions : function() {
+	    // settingOptions : function() {
 
-	        $('.settings-icon').on('click', function () {
-	            $(this).parent().toggleClass("open");
-	        });
+	    //     $('.settings-icon').on('click', function () {
+	    //         $(this).parent().toggleClass("open");
+	    //     });
 
-	        $('.toggle-video').on('click', function() {
-	            $('#big-video-wrap').toggleClass('hide-video');
-	        });
+	    //     $('.toggle-video').on('click', function() {
+	    //         $('#big-video-wrap').toggleClass('hide-video');
+	    //     });
 
-	        $('.toggle-opacity-first').on('click', function() {
-	            $('.home').toggleClass('full-color');
-	        });
+	    //     $('.toggle-opacity-first').on('click', function() {
+	    //         $('.home').toggleClass('full-color');
+	    //     });
 
-	        $('.toggle-opacity-all').on('click', function() {
-	            $('.home').toggleClass('full-color');
-	            $('.slide-1').toggleClass('full-color');
-	            $('.slide-2').toggleClass('full-color');
-	            $('.slide-3').toggleClass('full-color');
-	            $('.contact').toggleClass('full-color');
-	        });
+	    //     $('.toggle-opacity-all').on('click', function() {
+	    //         $('.home').toggleClass('full-color');
+	    //         $('.slide-1').toggleClass('full-color');
+	    //         $('.slide-2').toggleClass('full-color');
+	    //         $('.slide-3').toggleClass('full-color');
+	    //         $('.contact').toggleClass('full-color');
+	    //     });
 
-	        $('.toggle-phone').on('click', function() {
-	            $('.home-phone').toggleClass('hide animated fadeIn');
-	            $('.home-copy').toggleClass('col-sm-8 col-sm-offset-2 col-sm-6');
-	        });
+	    //     $('.toggle-phone').on('click', function() {
+	    //         $('.home-phone').toggleClass('hide animated fadeIn');
+	    //         $('.home-copy').toggleClass('col-sm-8 col-sm-offset-2 col-sm-6');
+	    //     });
 
-	        $('.toggle-slide-fade').on('click', function() {
+	    //     $('.toggle-slide-fade').on('click', function() {
 
-	            if(s.fadeSlides === false) {
-	                s.fadeSlides = true;
-	            } else if ( s.fadeSlides === true) {
-	                s.fadeSlides = false;
-	            }
+	    //         if(s.fadeSlides === false) {
+	    //             s.fadeSlides = true;
+	    //         } else if ( s.fadeSlides === true) {
+	    //             s.fadeSlides = false;
+	    //         }
 
-	            $('.slide-1').toggleClass("fade-background");
-	            $('.slide-2').toggleClass("fade-background");
-	            $('.slide-3').toggleClass("fade-background");
-	        });
-	    },
+	    //         $('.slide-1').toggleClass("fade-background");
+	    //         $('.slide-2').toggleClass("fade-background");
+	    //         $('.slide-3').toggleClass("fade-background");
+	    //     });
+	    // },
 
 	    mailChimpAjax: function() {
 

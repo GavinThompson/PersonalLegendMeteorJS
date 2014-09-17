@@ -2,10 +2,13 @@
 	<div class="container-fluid">
 
 		<div class="row">
+			{{> header}}
 			{{> errors}}
 		</div>
 
+		<div id="navbarOffsetTopMargin" style="margin-top: -20px;">
 		    {{> yield}}
+		</div>
 
     </div>
 </template>

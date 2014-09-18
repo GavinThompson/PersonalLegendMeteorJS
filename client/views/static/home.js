@@ -24,7 +24,7 @@ Template.home.rendered= function() {
 	        this.mailChimpAjax();
 
 	        //Settings -> can be removed in your production code and change any on click actions into the keep settings function
-	        this.settingOptions();
+	        // this.settingOptions();
 	    },
 
 	    bindUiActions: function (){
@@ -85,19 +85,19 @@ Template.home.rendered= function() {
 
 	            switch ($(this).children().data('index')) {
 	                case 1 :
-	                    $(this).children().append("<i class='entypo-home'></i>");
+	                    $(this).children().append("<i class='fa fa-home'></i>");
 	                break;
 	                case 2 :
-	                    $(this).children().append("<i class='entypo-dot'></i>");
+	                    $(this).children().append("<i class='fa fa-institution'></i>");
 	                break;
 	                case 3 :
-	                    $(this).children().append("<i class='entypo-dot-2'></i>");
+	                    $(this).children().append("<i class='fa fa-comments'></i>");
 	                break;
 	                case 4 :
-	                    $(this).children().append("<i class='entypo-dot-3'></i>");
+	                    $(this).children().append("<i class='fa fa-group'></i>");
 	                break;
 	                case 5 :
-	                    $(this).children().append("<i class='entypo-mail'></i>");
+	                    $(this).children().append("<i class='fa fa-envelope'></i>");
 	                break;
 	            }
 	        });

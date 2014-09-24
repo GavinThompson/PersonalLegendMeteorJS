@@ -1,2 +1,1 @@
-// Houston.add_collection(Meteor.users);
-// Currently no longer in project until dependency updated
+Houston.add_collection(Meteor.users);

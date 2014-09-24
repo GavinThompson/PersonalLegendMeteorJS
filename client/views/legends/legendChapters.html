@@ -1,10 +1,38 @@
 <template name="legendChapters">
 
-	<!-- Hmmmmmm needs Row/Bootstrap3 Grid implemented? -->
+	<div class="row tempBuffer">
+		<div class="col-xs-2">
+			<button class="btn btn-primary">
+				<i class="fa fa-check-square"></i> Published Chapters
+			</button>
+		</div>
+	</div>
 	 <div id="chapterEditCards">
-        {{#each chapters}}
+    
+        <!-- index generated with {{index}} within loop -->
+            <!-- For each # in X, generate X <div class="row"></div> - where X = {{publisherChapterRows}} ... this may need to go above line 14 #each-->
+            <!-- Generate up to four cards for each row. -->
+                    <!-- If {{index = X(above) multipled by 1,2,3,4 generate chapter card}} -->
+        <!-- // if( (Template.legendChapters.publishedRows % index === 0 ) )else create new row -->
+
+        {{#each published_chapters_with_index}}
+            {{index}}
             {{> chapterCard}}
         {{/each}}
     </div>
 
+    <hr>
+
+    <div class="row tempBuffer" style="margin-top: 30px;">
+    	<div class="col-xs-2">
+    		<button class="btn btn-primary">
+    			<i class="fa fa-minus-square"></i> Unpublished Legends
+    		</button>
+    	</div>
+    </div>
+	<div id="chapterEditCards">
+        {{#each unpublished_chapters_with_index}}
+            {{> chapterCard}}
+        {{/each}}
+    </div>
 </template>

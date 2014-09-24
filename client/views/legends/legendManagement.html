@@ -1,0 +1,63 @@
+<template name="legendManagement">
+	<div id="legendManagement">
+	
+		<div class="col-sm-6 col-lg-3">
+			<a href="{{pathFor 'legendPage'}}" class="widget">
+				<div class="widget-content widget-content-mini themed-background-muted">
+					<strong class="text-dark">View Legend</strong>
+				</div>
+				<div class="widget-content text-right clearfix">
+					<div class="widget-icon themed-background-social pull-left">
+						<i class="fa fa-file-text-o text-light-op"></i>
+					</div>
+					<!-- <h2 class="widget-heading h3 themed-color-social"><strong>+ 10</strong></h2> -->
+					<!-- <span class="text-muted">FLIGHTS</span> -->
+				</div>
+			</a>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+			<a href="{{pathFor 'legendEdit'}}" class="widget">
+				<div class="widget-content widget-content-mini themed-background-muted">
+					<strong class="text-dark">Edit Legend Details</strong>
+				</div>
+				<div class="widget-content text-right clearfix">
+					<div class="widget-icon themed-background-flat pull-left">
+						<i class="fa fa-edit text-light-op"></i>
+					</div>
+					<!-- <h2 class="widget-heading h3 themed-color-flat"><strong>+ 5</strong></h2> -->
+					<!-- <span class="text-muted">ALBUMS</span> -->
+				</div>
+			</a>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+			<a href="{{pathFor 'chapterCreate'}}" class="widget">
+				<div class="widget-content widget-content-mini themed-background-muted">
+					<strong class="text-dark">Add New Chapter</strong>
+				</div>
+				<div class="widget-content text-right clearfix">
+					<div class="widget-icon themed-background-creme pull-left">
+						<i class="fa fa-plus-circle text-light-op"></i>
+					</div>
+					<!-- <h2 class="widget-heading h3 themed-color-creme"><strong>15</strong></h2> -->
+					<!-- <span class="text-muted">NETWORKS</span> -->
+				</div>
+			</a>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+			<a href="{{pathFor 'legendChapters'}}" class="widget">
+				<div class="widget-content widget-content-mini themed-background-muted">
+					<strong class="text-dark">Manage Chapters</strong>
+				</div>
+				<div class="widget-content text-right clearfix">
+					<div class="widget-icon themed-background-amethyst pull-left">
+						<i class="fa fa-magic text-light-op"></i>
+					</div>
+					<h2 class="widget-heading h3 themed-color-amethyst"><strong>{{legendChapters}}</strong></h2>
+					<span class="text-muted">Chapters</span>
+				</div>
+			</a>
+			</div>
+	</div>
+
+
+</template>

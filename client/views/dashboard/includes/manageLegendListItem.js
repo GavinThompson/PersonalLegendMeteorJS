@@ -1,16 +1,16 @@
-Template.manageLegendList.events({
+Template.manageLegendListItem.helpers({
 
-	'click .sidebar-nav-submenu': function(e, template) {
-	    e.preventDefault();
-
-		if( $(e.target).hasClass("open") ){
-			console.log("has open! Begin remove")
-			$(e.target).removeClass("open")
-			console.log("Removed....")
+	condensedTitle: function() { 
+		fullTitle = this.title
+		titleLength = fullTitle.length
+		if(titleLength >= 14){
+			newTitle = fullTitle.slice(0, 14)
+			newTitle = newTitle + "..."
+			return newTitle
 		}else{
-			console.log("doesn't have open! Begin add")
-			$(e.target).addClass("open")
-			console.log("Added....")
+			return fullTitle
 		}
 	}
+
+
 });

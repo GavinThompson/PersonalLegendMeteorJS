@@ -1,179 +1,329 @@
-if (Legends.find().count() === 0) { 
-
-	var now = new Date().getTime();
-
-	// create two users
-	var tomId = Meteor.users.insert({ 
-		username: 'TomBombadil'
-	});
-	var tom = Meteor.users.findOne(tomId); 
-
-	var skeletorId = Meteor.users.insert({
-	    username: 'Skeletor'
-	});
-	
-	var skeletor = Meteor.users.findOne(skeletorId);
-
-
-	var skeletorId = Legends.insert({
-		title: 'Skeletor Birthday Chronology',
-		userId: skeletor._id,
-		author: skeletor.username,
-		synopsis: 'Smokinga idque prevention support cessation cessationo referrentur protection supportiis preventioni an smokinga evaluationix vis. Supportius supporte volumus quo preventionebus eu has appellantur molestie cetero cessation tobaccontius cu cu labitur iracundia. Utroque otru prevention lobortis smokingim protection evaluationus tobacco mei an otructos nonumes. Cessationus vis tobacco cessation protectionaram vim cessationator cessationium duo smoking protection otrumom cessation protectionebus habeo tobacco cessation. Ne tobacconix cum consulatu protectionatrix cessation abhorreant nostro smoking support suas preventiontri has protectionebus protection. Preventionatrix protectionom per smoking saepe otruxios cessationia preventionibus preventionius protectionii cessation cessation tobaccoches ipsum tobaccoquius protection. \n		Prevention evaluationae sea preventionius sed tobacco evaluationebus smokingus sint delicata in. Evaluation support preventionios smoking otruntae smokingos smokingios honestatis cessationibus protectionator numquam evaluation evaluation pri. Cessation disputationi prevention otru otru has sed ex cessation otrupate exerci veritus. Eu protectionis tobaccoctuum evaluationiis protection otructix evaluationeorum prevention evaluation otrunes hinc doming tobacco duo an protection. Sapientem smoking no forensibus cessationios support otru cotidieque quot cessationiis disputando congue. Supportaram everti tobacco otruria prevention protectionem supportium supportator cum protection sit cessationorum augue smokingius.',
-		submitted: now - 7 * 3600 * 1000,
-		chaptersCount: 2
-	});
-
-	Chapters.insert({
-		legendId: skeletorId,
-		userId: skeletor._id,
-		author: skeletor.username,
-		subtitle: 'Skeletor is born!! Bahahaah!',
-		dateSpan: 'Jun 04 1982',
-		backgroundColour: '#FFCC00',
-		submitted: now - 5 * 3600 * 1000,
-		body: 'Lorem dugtriotem eloquentiam kingdraquorum diam excadrilliorum qui braviarigem mundi cubonedi bagoniis skiploomtri turtwig volumus. Emboar drilbur squirtle helioliskaram flygon seviperium luxraigatrix lillipup deoxysiorum lunatone appetere sunkern flabebechiorum bronzong saepe heracross. Eirmod koffingius floatzel bibarel nosepassuum adversarium puruglinerum pri mothimiis weedle professor oako zoroark shedinjacteorum furfrou eu. Butterfreera gligariorum meowsticibus gibleriis mea rayquazante no turtwig mandibuzzius zorua. Tation scizoraram gigalith noibat sit arcaninedaram heracross azelf corsolases magnezone seviper braviary vocent illumise emolgararam croagunkatrix. Patratius hoppip usu aron zebstrika rhydon dewgong perfecto deerling mollis totodile garchomp ut. Archeops skarmory kricketot wingull tirtougaxix in nominati forretress dustox conceptam pichuxes invenire diam maiorum posse./n Mea lotadiis murkrow charmeleon chanseitius idque chimechochix ex mediocritatem mediocritatem baltoy chinchourus fletchlinges nec weepinbellium appetere. Slugma seismitoados adhuc blitzle mismagius accusam lopunnipates exerci heatran. Copiosae accusam poliwag te scolipedentos ex vero grovylentatrix greninjares tornadus utinam voluptatum electivire laboramus fletchinderis baltoinerum geoduderas. Deseruisse venomoth bunearinii fletchinder tation yveltalatrix conceptam shroomish froslasstri chatotator metapodi girafarig scaevola. Dwebble poliwhirlia deseruisse pericula jirachi dico elaboraret sylveon sneasel spinarakerum budew at ei vim gastrodon raticate. Metang togepi petililii gallade yveltal ledybadiis duo quod solrockem steelix zangoosemom indoctum bibarel wooper. Cubone pansearuum grovyle gravelerim shelgon chimcharus fraxure tollit galladectos piloswinesos cubchoogiis boldore iriure simipour. Feebas ei scolipede heracrossuum no ariadosuum machamptri scytherius sed no an.'
-	});
-	
-	Chapters.insert({
-		legendId: skeletorId,
-		userId: skeletor._id,
-		author: skeletor.username, 
-		subtitle: 'Defeated by He-Man',
-		dateSpan: 'Jun 04 2013',
-		backgroundColour: '#551A8B',
-		submitted: now - 3 * 3600 * 1000, 
-		body: 'Farts bagas double-barrel double-barrel farts double-barreluum plasticii fartso double-barrelus summo admodum plastic plastic. Farts mentitum id double-barreli double-barreles bag tincidunt rectum dicam usu poop at double-barrel plasticius eam. Qui farts in rectum fartsa farts augue mei poop rectum fartsem congue. Poopus rectum bag poop fartsius rectum double-barrel errem poopas torquatos poop bagorum delicata pri. Bag lobortis double-barreleis poop poop poop omnis fartsiorum poopia est poopius plastic delicata disputando malis.\n Poop mei omittantur rectum partiendo bag tamquam double-barrelorum ex plastic rectum poop. Feugait fartsis quo errem vel double-barrelis double-barrel farts bageorum. Utroque delenit plastic no poopius id bag double-barrela farts farts tincidunt rectumii poop sapientem. Fartsas hendrerit mel poopium poopatrix vel poop double-barreleorum exerci farts fartsia plasticia. Eu persecuti dicant usu dico double-barrelii rectum poop viris rectum. Posse fartseis plastic double-barrel pri fartsium eum rectumii poop wisi plasticom cetero rectumas plastic. Ea fartsiis sit plasticuum poop bag rectum te sint farts double-barreleorum. Te rectum in rectumii double-barrel bag poop plastic farts plastic rectumuum quod his rectum rectum. Errem poop fartsibus double-barrel plastic farts bagus plastic rectumos poopatrix bagator fartse poop bagtri plastic double-barrelii fartserum.'
-	});
-
-	Legends.insert({
-		title: 'Meteor',
-		userId: tom._id,
-		author: tom.username,
-		synopsis: 'Smokinga idque prevention support cessation cessationo referrentur protection supportiis preventioni an smokinga evaluationix vis. Supportius supporte volumus quo preventionebus eu has appellantur molestie cetero cessation tobaccontius cu cu labitur iracundia. Utroque otru prevention lobortis smokingim protection evaluationus tobacco mei an otructos nonumes. Cessationus vis tobacco cessation protectionaram vim cessationator cessationium duo smoking protection otrumom cessation protectionebus habeo tobacco cessation. Ne tobacconix cum consulatu protectionatrix cessation abhorreant nostro smoking support suas preventiontri has protectionebus protection. Preventionatrix protectionom per smoking saepe otruxios cessationia preventionibus preventionius protectionii cessation cessation tobaccoches ipsum tobaccoquius protection. \n Prevention evaluationae sea preventionius sed tobacco evaluationebus smokingus sint delicata in. Evaluation support preventionios smoking otruntae smokingos smokingios honestatis cessationibus protectionator numquam evaluation evaluation pri. Cessation disputationi prevention otru otru has sed ex cessation otrupate exerci veritus. Eu protectionis tobaccoctuum evaluationiis protection otructix evaluationeorum prevention evaluation otrunes hinc doming tobacco duo an protection. Sapientem smoking no forensibus cessationios support otru cotidieque quot cessationiis disputando congue. Supportaram everti tobacco otruria prevention protectionem supportium supportator cum protection sit cessationorum augue smokingius.',
-		submitted: now - 10 * 3600 * 1000,
-		chaptersCount: 0
-	});
-
-	Legends.insert({
-		title: 'The Meteor Book',
-		userId: tom._id,
-		author: tom.username,
-		synopsis: 'Smokinga idque prevention support cessation cessationo referrentur protection supportiis preventioni an smokinga evaluationix vis. Supportius supporte volumus quo preventionebus eu has appellantur molestie cetero cessation tobaccontius cu cu labitur iracundia. Utroque otru prevention lobortis smokingim protection evaluationus tobacco mei an otructos nonumes. Cessationus vis tobacco cessation protectionaram vim cessationator cessationium duo smoking protection otrumom cessation protectionebus habeo tobacco cessation. Ne tobacconix cum consulatu protectionatrix cessation abhorreant nostro smoking support suas preventiontri has protectionebus protection. Preventionatrix protectionom per smoking saepe otruxios cessationia preventionibus preventionius protectionii cessation cessation tobaccoches ipsum tobaccoquius protection. \n Prevention evaluationae sea preventionius sed tobacco evaluationebus smokingus sint delicata in. Evaluation support preventionios smoking otruntae smokingos smokingios honestatis cessationibus protectionator numquam evaluation evaluation pri. Cessation disputationi prevention otru otru has sed ex cessation otrupate exerci veritus. Eu protectionis tobaccoctuum evaluationiis protection otructix evaluationeorum prevention evaluation otrunes hinc doming tobacco duo an protection. Sapientem smoking no forensibus cessationios support otru cotidieque quot cessationiis disputando congue. Supportaram everti tobacco otruria prevention protectionem supportium supportator cum protection sit cessationorum augue smokingius.',
-		submitted: now - 12 * 3600 * 1000,
-		chaptersCount: 0
-	}); 
-}
-
 
 // CHAPTER THEME
 if (Themes.find().count() === 0) { 
 
-	Themes.insert({
+	var chapterTheme1 = Themes.insert({
 		name: "White",
 		backgroundColour: "#FFF",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme2 = Themes.insert({
 		name: "OffWhite",
 		backgroundColour: "#F2F2F2",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme3 = Themes.insert({
 		name: "Gray20",
 		backgroundColour: "#333",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme4 = Themes.insert({
 		name: "Pink",
 		backgroundColour: "#E5BDDC",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme5 = Themes.insert({
 		name: "Ghostwhite",
 		backgroundColour: "#FFF",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme6 = Themes.insert({
 		name: "FlatNavy",
 		backgroundColour: "#434658",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme7 = Themes.insert({
 		name: "Violet",
 		backgroundColour: "rgb(208,194,220)",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme8 = Themes.insert({
 		name: "Lavender",
 		backgroundColour: "rgb(226,216,236)",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme9 = Themes.insert({
 		name: "FlatPastelBlue",
 		backgroundColour: "#81B3CC",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme10 = Themes.insert({
 		name: "SalmonPeach",
 		backgroundColour: "#FFE5E2",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme11 = Themes.insert({
 		name: "Mint",
 		backgroundColour: "#8FF2D9",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme12 = Themes.insert({
 		name: "Rosee",
 		backgroundColour: "#BF5B6E",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme13 = Themes.insert({
 		name: "Beige",
 		backgroundColour: "#F4E9CD",
 		fontColour: "#555",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme14 = Themes.insert({
 		name: "Sand",
 		backgroundColour: "#BF9A5B",
 		fontColour: "#FFF",
 		texture: null
 	}); 
 
-	Themes.insert({
+	var chapterTheme15 = Themes.insert({
 		name: "PaleYellow",
 		backgroundColour: "#FBFDC1",
 		fontColour: "#555",
 		texture: null
 	}); 
-
-
-
 }
+
+
+if (Legends.find().count() === 0) { 
+
+	var now = new Date().getTime();
+
+	var baseNumber = 4
+
+	var numberIncrease = function(){
+		var newNumber = baseNumber++
+		return newNumber
+	}
+
+	titlesArray = ["The autumn trip that changed my life", "Golf is a good walk spoiled.", "Don't quack like a duck, soar like an eagle.", "Do one thing every day that scares you.", "Hold fast to dreams", "What's meant to be will always find a way", "The flower that blooms in adversity", "Sometimes you wake up", "Sometimes the fall kills you",  "And sometimes, when you fall, you fly", "Life is a broken-winged bird", "You never have to change anything", "You got up in the middle of the night to write", "If you're reading this...", "Congratulations, you're alive", "If that's not something to smile about", "The unexamined life is not worth living", "We have to go back", "It's not the load that breaks you down", "Pain is temporary", "Quitting lasts forever", "I was never really insane. Except.." , "The things you do for yourself...", "It is good to love many things", "What you do makes a difference", "Love is the absence of judgment", "Ancient Egyptians had fifty words for sand", "Eskimos have a hundred words for snow", "There are no words for that", "There are years that ask", "That means that this goodbye", "I dream my painting", "I paint my dream."]
+
+	// create two users
+	var testUserID = Meteor.users.insert({ 
+		username: 'AdamRandor',
+		email: 'test@test.com'
+	});
+
+	Accounts.setPassword(testUserID, 'testtesttest') 
+	var testUser = Meteor.users.findOne(testUserID); 
+
+	var legendFixtureArray = []
+
+
+	var legend1 = Legends.insert({
+		title: titlesArray[1],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend1  )
+
+	var legend2 = Legends.insert({
+		title: titlesArray[2],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend2  )
+
+	var legend3 = Legends.insert({
+		title: titlesArray[3],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend3  )
+
+	var legend4 = Legends.insert({
+		title: titlesArray[4],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend4  )
+
+	var legend5 = Legends.insert({
+		title: titlesArray[5],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend5  )
+
+	var legend6 = Legends.insert({
+		title: titlesArray[6],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend6  )
+
+	var legend7 = Legends.insert({
+		title: titlesArray[7],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend7  )
+
+	var legend8 = Legends.insert({
+		title: titlesArray[8],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend8  )
+
+	var legend9 = Legends.insert({
+		title: titlesArray[9],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend9  )
+
+	var legend10 = Legends.insert({
+		title: titlesArray[10],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend10 )
+
+	var legend11 = Legends.insert({
+		title: titlesArray[11],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend11 )
+
+	var legend12 = Legends.insert({
+		title: titlesArray[12],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend12 )
+
+	var legend13 = Legends.insert({
+		title: titlesArray[13],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend13 )
+
+	var legend14 = Legends.insert({
+		title: titlesArray[14],
+		userId: testUser._id,
+		author: testUser.username,
+		synopsis: "'This is a story about them,' says the man on the radio. And you are concerned, because this is not a story you were ever supposed to hear. Welcome to Night Vale. This is a story about them.",
+		submitted: now - numberIncrease() * 3600 * 1000,
+		chaptersCount: 3
+	});
+	legendFixtureArray.push( legend14 )
+
+	console.log("legend fixture array")
+	console.log( legendFixtureArray )
+
+
+
+	// Begin Adding Chapters
+
+	var addChapterSeeds = function(){
+
+		legendsLength = legendFixtureArray.length
+
+		for(i = 1; i < legendsLength; i++){
+			Chapters.insert({
+				legendId: legendFixtureArray[i],
+				userId: testUser._id,
+				author: testUser.username,
+				subtitle: 'It was a good year on the Bayou.',
+				dateSpan: 'Jun 04 1982',
+				chapterThemeId: chapterTheme10,
+				// backgroundColour: '#FFCC00',
+				submitted: now - 5 * 3600 * 1000,
+				body: "Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage. /n Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage."
+			});
+
+			Chapters.insert({
+				legendId: legendFixtureArray[i],
+				userId: testUser._id,
+				author: testUser.username,
+				subtitle: 'Wondered whatever happened on that long, long day.',
+				dateSpan: 'Nov 04 1998',
+				chapterThemeId: chapterTheme11,
+				// backgroundColour: '#FFCC00',
+				submitted: now - 6 * 3600 * 1000,
+				body: "Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage. /n Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage."
+			});
+
+			Chapters.insert({
+				legendId: legendFixtureArray[i],
+				userId: testUser._id,
+				author: testUser.username,
+				subtitle: 'It was a good day to see red.',
+				dateSpan: 'Jan 20 2006',
+				chapterThemeId: chapterTheme12,
+				// backgroundColour: '#FFCC00',
+				submitted: now - 7 * 3600 * 1000,
+				body: "Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage. /n Accusamus sensorium the tribal man the medium is the messagesas vivendum gutenberg villagerpuum gutenberg villagectom sensoriumis global villagetia. His sensoriumium idque the tribal manem labitur marshall mcluhanatrix global villagetaram cool the medium is the messagedii predicting the web coolom acoustic space the literate man the tribal man luptatum predicting the webium. Conclusionemque sensoriumiis volutpat ad at soooooooo hot usu acoustic spacechios soooooooo hoteorum global villagetuum gutenberg village sensoriumibus percipit admodum the literate manes. The tribal man antiopam the medium is the message debitis cool soooooooo hot the tribal man gutenberg village predicting the web hotibus duo soooooooo hot marshall mcluhan. Sooooooooo coolius gutenberg villagerix gutenberg villagetim consulatu soooooooo hotii suavitate sensoriumium acoustic spacesi marshall mcluhan hotibus marshall mcluhan predicting the webim global villagexis eam marshall mcluhanuum sit the medium is the massage. Aperiri soooooooo hot the medium is the message hot the tribal man soooooooo hotem sensorium sooooooooo cool the literate man viderer appetere ne falli the medium is the massage."
+			});
+		}
+
+	}(); //run function
+	
+}
+

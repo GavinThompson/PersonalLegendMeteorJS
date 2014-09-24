@@ -30,9 +30,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-3 control-label" for="synopsis">Chapter Details</label>
+                        <label class="col-md-3 control-label" for="body">Chapter Details</label>
                         <div class="col-md-9">
-                            <textarea id="synopsis" name="synopsis" rows="6" class="form-control" placeholder="You don't know about me without you have read a book by the name of The Adventures of {{currentUsername}}; but that ain't no matter...">{{body}}</textarea>
+                            <textarea id="body" name="body" rows="6" class="form-control" placeholder="You don't know about me without you have read a book by the name of The Adventures of {{currentUsername}}; but that ain't no matter...">{{body}}</textarea>
                             <span class="help-block">Tell us a story about what happened during this date</span>
                         </div>
                     </div>
@@ -43,14 +43,38 @@
                             <select id="chapterThemeId" name="chapterThemeId" class="select-chosen" data-placeholder="Choose a theme..">
                                 <option></option>
                                 {{#each themeOptions}}
-                                    <!-- {{#if}} -->
-<!-- =                                      <option value="{{_id}}" selected>{{name}}</option> -->
-                                    <!-- {{else}} -->
-                                      <option value="{{_id}}">{{name}}</option>
-                                    <!-- {{/if}} -->
+                                        <option value="{{_id}}">{{name}}</option>
                                 {{/each}}
                             </select>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        
+                        <label class="col-md-3 control-label">Published Status:</label>
+                        
+                        <div class="col-md-9">
+                            <div class="btn-group btn-toggle" data-toggle="buttons" id="published">
+
+                                {{#if published}}
+                                    <label id="publishOption" class="btn btn-sm btn-success active">
+                                      <input type="radio" name="published" value="true" checked> Publish
+                                    </label>
+                                    <label id="draftOption" class="btn btn-sm btn-default">
+                                      <input type="radio" name="published" value="false"> Save for Later
+                                    </label>
+                                {{else}}
+                                    <label id="publishOption" class="btn btn-sm btn-default">
+                                      <input type="radio" name="published" value="true"> Publish
+                                    </label>
+                                    <label id="draftOption" class="btn btn-sm btn-success active">
+                                      <input type="radio" name="published" value="false" checked> Save for Later
+                                    </label>
+                                {{/if}}
+                                
+                              </div>
+                        </div>
+
                     </div>
 
                     <div class="form-group form-actions">

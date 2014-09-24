@@ -2,9 +2,12 @@
 Template.chapterEdit.rendered = function() {
 	// Fancy dropdown "chosen" 
 	$('.select-chosen').chosen({width: "100%"});
+	$('.select-chosen').val(this.data.chapterThemeId);
+	$('.select-chosen').trigger("chosen:updated")
 
 	// Date picker
 	$('.input-datepicker, .input-daterange').datepicker({weekStart: 1}).on('changeDate', function(e){ $(this).datepicker('hide'); });
+
 }
 
 
@@ -22,12 +25,32 @@ Template.chapterEdit.helpers({
 			username = null
 		}
 		return username;
-	} 
+	},
+
+	chosenChapterTheme: function(){
+		
+	}
 
 });
 
 
 Template.chapterEdit.events({ 
+	'click .btn-toggle': function(e){
+		$('#publishOption').toggleClass('btn-success').toggleClass('btn-default'); 
+		$('#draftOption').toggleClass('btn-default').toggleClass('btn-success'); 
+
+		// $('input[type="radio"]').not(':checked').prop("checked", true); 
+		// - not working quite right on multiple clicks in quick succession 
+
+		$hiddenRadios = $('input[type="radio"][name="published"]')
+
+		var $checked = $hiddenRadios.filter(':checked');
+	    var $next = $hiddenRadios.eq($hiddenRadios.index($checked) + 1);
+	    if(!$next.length){
+	        $next = $hiddenRadios.first();
+	    }
+	    $next.prop("checked", true);
+	},	
 	// 
 	'submit form': function(e, template) {
 	    e.preventDefault();
@@ -39,8 +62,8 @@ Template.chapterEdit.events({
 
 		var $subtitle = $(e.target).find('[name=subtitle]');
 		var $body = $(e.target).find('[name=body]');
-		var $dateSpan = $(e.target).find('[name=dateSpan]');
-		// var $backgroundColour = $(e.target).find('[name=backgroundColour]');
+		var $dateSpan = $("#dateSpan")
+		var $publishStatus = $(e.target).find('[name=published]:checked');
 		var $chapterThemeId = $(e.target).find('[name=chapterThemeId]');
 
 
@@ -48,9 +71,8 @@ Template.chapterEdit.events({
 			subtitle: $subtitle.val(),
 			body: $body.val(),
 			dateSpan: $dateSpan.val(),
-			// backgroundColour: $backgroundColour.val(),
+			published: convertToBoolean( $publishStatus.val() ),
 			chapterThemeId: $chapterThemeId.val(),
-			uploadedImgURL: null,
 	    };
   
 		Chapters.update(currentChapterId, 
@@ -62,7 +84,7 @@ Template.chapterEdit.events({
 			        // display the error to the user
 					alert(error.reason); 
 				}else{
-			        Router.go('legendEdit', {_id: currentLegendId});
+			        Router.go('legendChapters', {_id: currentLegendId});
 	        	}
 			}
 		); 
@@ -88,7 +110,7 @@ Template.chapterEdit.events({
 			console.log(Legends.findOne( currentLegendId ).chaptersCount)
 
 
-			Router.go('legendEdit', {_id: currentLegendId});
+			Router.go('legendChapters', {_id: currentLegendId});
 		}
 	}
 });

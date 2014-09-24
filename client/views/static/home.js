@@ -8,7 +8,7 @@ Template.home.rendered= function() {
 	        coloursSet: false, //set this if using the settings in production
 	        animationTimeDelay: 350, //How often to fire the animation in ms
 	        videoFadeInWait: 2500, //recommened to be greater than 2 sec so resize is not seen in FF ( experiment based on filesize)
-	        textFadeSpeed: 2000 //how fast to rotae text on the homepage
+	        textFadeSpeed: 3000 //how fast to rotae text on the homepage
 	    },
 	    
 	    init: function() {
@@ -54,6 +54,7 @@ Template.home.rendered= function() {
 	        //text slider on homepage
 	        $(".demo1 .rotate").textrotator({
 	            animation: "fade",
+	            separator: ",",
 	            speed: s.textFadeSpeed
 	        });
 
@@ -258,10 +259,10 @@ Template.home.rendered= function() {
     rootHome.init();
 
 
-	$("#mostRecentLegends").carousel();
-	$("#mostViewedLegends").carousel();
-	$("#mostLovedLegends").carousel();
-	$("#mostSharedLegends").carousel();
+	// $("#mostRecentLegends").carousel();
+	// $("#mostViewedLegends").carousel();
+	// $("#mostLovedLegends").carousel();
+	// $("#mostSharedLegends").carousel();
 }
 
 

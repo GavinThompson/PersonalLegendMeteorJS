@@ -8,7 +8,6 @@ sacha:spin@2.0.4
 accounts-password
 accounts-base
 mrt:accounts-t9n
-lepozepo:s3@2.1.4
 pauldowman:dotenv@0.1.1
 iron:router
 less
@@ -17,4 +16,5 @@ mrt:accounts-ui-bootstrap-3
 natestrauser:font-awesome
 joshowens:accounts-entry
 houston:admin
+lepozepo:s3
 

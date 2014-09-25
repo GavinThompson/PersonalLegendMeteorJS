@@ -1,5 +1,4 @@
 Template.dashboardLayout.rendered = function() {
-
 	/*
 	 *  Document   : app.js
 	 *  Author     : pixelcave
@@ -11,7 +10,7 @@ Template.dashboardLayout.rendered = function() {
 	 */
 
 	App = function() {
-	    console.log("APP INIT")
+	    // console.log("APP INIT")
 	    /* Helper variables - set in uiInit() */
 	    var page, pageContent, header, sidebar, sBrand, sExtraInfo, sidebarAlt, sScroll, sScrollAlt;
 
@@ -487,6 +486,6 @@ Template.dashboardLayout.rendered = function() {
 	/* Initialize App when page loads */
 	$(function(){ App.init(); });
 
-	console.log("APP INIT 2??")
+	// console.log("APP INIT 2??")
 
 };

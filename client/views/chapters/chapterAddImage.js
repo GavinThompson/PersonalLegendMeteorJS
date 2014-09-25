@@ -21,21 +21,9 @@ Template.chapterAddImage.events({
 		var files = $("input.file_bag")[0].files
 
 		S3.upload(files,"/uploads",function(e,response){
-			console.log("e");
-			console.log(e);
-			console.log("response");
-			console.log(response);
 
-			console.log("response.url");
-			console.log(response.url);
 			imageURL = response.url;
-
-			console.log("response.secure");
-			console.log(response.secure_url);
 			imageSecureUrl = response.secure_url;
-
-			console.log("response.relative_url");
-			console.log(response.relative_url);
 			imageRelativeURL = response.relative_url;
 
 			var uploadedImage = {
@@ -50,41 +38,34 @@ Template.chapterAddImage.events({
 			var chapterProperties = {
 				hasImage: true
 			};
-
-			console.log("uploadedImage: ")
-			console.log(uploadedImage)
-
-			console.log("chapterProperties: ")
-			console.log(chapterProperties)
-
+			// console.log("uploadedImage: ")
+			// console.log(uploadedImage)
+			// console.log("chapterProperties: ")
+			// console.log(chapterProperties)
 			Meteor.call('uploadedImage', uploadedImage, function(error, uploadedImageId){ 
-				
 				if(error){
 					throwError(error.reason); 
-
 					if (error.error === 302){
 						Router.go('chapterAddImage', {_legendId: currentLegendId, _id: currentChapterId});
 					}
-
 				}else{
 					Router.go('legendChapters', {_id: currentLegendId});
 				}
 			});
 
-
-			// Chapters.update(currentChapterId, 
-			// 	{$set:
-			// 		chapterProperties
-			// 	},	
-			// 	function(error){ 
-			// 		if(error){
-			// 			// display the error to the user
-			// 			alert(error.reason); 
-			// 		}else{
-			// 			Router.go('legendChapters');
-			// 		}
-			// 	}
-			// ); 
+			Chapters.update(currentChapterId, 
+				{$set:
+					chapterProperties
+				},	
+				function(error){ 
+					if(error){
+						// display the error to the user
+						alert(error.reason); 
+					}else{
+						Router.go('legendChapters', {_id: currentLegendId});
+					}
+				}
+			); 
 		});
 
 		return false

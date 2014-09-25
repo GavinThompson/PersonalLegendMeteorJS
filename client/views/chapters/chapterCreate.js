@@ -62,6 +62,7 @@ Template.chapterCreate.events({
 			chapterThemeId: $chapterThemeId.val(),
 			uploadedImgURL: null,
 			published: convertToBoolean( $publishStatus.val() ),
+			hasImage: null,
 			legendId: template.data._id
 		};
 

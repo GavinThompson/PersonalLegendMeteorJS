@@ -8,10 +8,12 @@
                 <label for="uploadImg">
                     Add an image to this post!
                 </label>
+                <input type="file" class="file_bag">
+                <button class="upload">Upload</button>
 
-                {{#S3 callback="s3ChapterImageCallback"}}
-                    <input type="file" name="uploadImg">
-                {{/S3}}
+                {{#each files}}
+                    <p>{{percent_uploaded}}</p>
+                {{/each}}
             </div>
         </div>
   	    	

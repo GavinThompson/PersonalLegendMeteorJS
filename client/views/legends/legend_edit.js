@@ -14,7 +14,7 @@ Template.legendEdit.events({
 		        // display the error to the user
 				alert(error.reason); 
 			} else {
-		        Router.go('legendPage', {_id: currentLegendId});
+		        Router.go('legendView', {_id: currentLegendId});
         	}
 		}); 
 	}

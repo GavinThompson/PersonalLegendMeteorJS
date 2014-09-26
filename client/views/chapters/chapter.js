@@ -72,5 +72,5 @@ Template.chapter.rendered = function() {
     $('.parallax').parallax("50%", 0.8);
     $('.parallax-content').parallax("50%", 0.3);
 
-    console.log( "test.....")
+    // console.log( "test.....")
 };

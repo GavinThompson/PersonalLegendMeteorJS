@@ -8,6 +8,18 @@
 // BOOKBLOCK STYLING!
 
 /* Content Flip Style */
+
+#backgroundOverlayFix{
+	// this will be dropped when picture background conflict removed
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: #5ccdde;
+	height: 100%;
+	width: 100%;
+}
+
 #legendLayoutContainer {
 
 	.bb-bookblock {
@@ -157,10 +169,6 @@
 	.bb-bookblock {
 		width: 100%;
 		height: 100%;
-	}
-
-	.slideRight {
-		left: 240px;
 	}
 
 	.menu-panel {
@@ -333,11 +341,21 @@
 	}
 }
 
+
+// PUSH WHOLE PAGE
+#legendLayoutContainer.slideRight {
+	left: 240px;
+}
+
+
+// with JS - probably remove this & no-js at later date due to meteorjs requiring js
 .js #legendLayoutContainer {
+
 	.menu-panel {
-		position: fixed;
+		position: absolute;
 		left: -240px;
 	}
+
 	.content {
 		position: absolute;
 		top: 60px;

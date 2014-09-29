@@ -5,7 +5,7 @@ Template.legendView.helpers({
 
 	chaptersWithTOCIndex: function() {
 
-		var chapters = Chapters.find({ legendId: this._id }).fetch()
+		var chapters = Chapters.find({legendId: this._id, published: true}, {sort: {dateSpan: 1}});
 	    
 	    for(var i = 0; i < chapters.length; i++) {
 	    	// Table of contents start on '1' - so add '2' to 'i'
@@ -133,6 +133,8 @@ Template.legendView.rendered = function() {
 					jump = function() {
 						bb.jump( idx + 1 );
 					};
+
+				console.log( $( this ) )
 				
 				current !== idx ? closeTOC( jump ) : closeTOC();
 
@@ -149,6 +151,7 @@ Template.legendView.rendered = function() {
 		}
 
 		function setJSP( action, idx ) {
+			// set JSScrollPane
 			
 			var idx = idx === undefined ? current : idx,
 				$content = $items.eq( idx ).children( 'div.content' ),

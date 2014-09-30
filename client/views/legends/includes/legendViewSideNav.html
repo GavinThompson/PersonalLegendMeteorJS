@@ -1,5 +1,24 @@
 <template name="legendViewSideNav">
-	
+
+	<div class="menu-panel">
+		<h3>Table of Contents</h3>
+		<ul id="menu-toc" class="menu-toc">
+			<li class="menu-toc-current">
+				<a href="#item1">Introduction:</a>
+			</li>
+
+			{{fsdds}}
+			{{#each chaptersWithTOCIndex}}
+				<li>
+					<a href="#item{{tableOfContentIndex}}">{{condensedChapterTitle}}</a>
+				</li>
+			{{/each}}
+		</ul>
+		<div>
+			<!-- <a href="http://tympanus.net/Development/AudioPlayer/">&larr; Previous Demo: Responsive Audio Player</a> -->
+			<!-- <a href="http://tympanus.net/codrops/?p=12795">Back to the Codrops Article</a> -->
+		</div>
+	</div>
 
 
 </template>

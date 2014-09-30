@@ -15,12 +15,12 @@ Template.legendCreate.events({
 				throwError(error.reason);
 
 				if (error.error === 302){
-					Router.go('legendPage', {_id: error.details})
+					Router.go('legendCreate', {_id: error.details})
 				}
 				// 
 			}else{
 				// else go to page
-				Router.go('legendPage', {_id: id});
+				Router.go('legendView', {_id: id});
 			}
 		});
 	}

@@ -1,0 +1,70 @@
+<template name="legendView">
+
+	<div class="bb-custom-wrapper">
+		<div id="bb-bookblock" class="bb-bookblock">
+
+			<div class="bb-item bb-coverpage" id="item1">
+				<div class="content">
+					<div class="scroller">
+						<h2>{{title}}</h2>
+						<p>The Hon. Francis Gillette, in a speech in Hartford, Conn., in 1871, said
+						that there was "in Connecticut, on an average, one liquor shop to every
+						forty voters, and three to every Christian church. In this city, as stated
+						in the _Hartford Times_, The Title page page page page title title page.  The Title page page page page title title page. recently, we have five hundred liquor shops, and one million eight hundred and twenty-five thousand dollars were, last
+						year, paid for intoxicating drinks. A cry, an appeal, came to me from the
+						city, a few days since, after this wise: 'Our young men are going to
+						destruction, and we want your influence, counsel, and prayers, to help
+						save them.'"</p>
+
+						<p>The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. </p>
+
+						<p>"The pulse of a person in health beats about seventy strokes a minute, and
+						the ordinary term of life is about seventy years. In these seventy years,
+						the pulse of a temperate person beats two billion five hundred and
+						The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page.  term of human life, and life goes out in forty or	forty-five years, instead of seventy. This application of numbers is given	to show that the acceleration of those forces diminishes the term of humanlife."</p>
+
+						<p>"The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page."</p>
+
+						<p>"Massachusetts is moving to build an asylum for her twenty-five thousand
+						drunkards. Lager beer brewers at Boston Highlands have three millions of
+						dollars invested in the business, manufactured four hundred and
+						ninety-five thousand barrels last year, and paid a tax of half a million
+						to the general government. The city of Chicago, last year, received into
+						her treasury one hundred and ten thousand dollars for the sale of
+						indulgences to sell intoxicating drinks.</p>
+
+						<p>"The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page. The Title page page page page title title page.  cost of two hundred and twenty-eight million pounds,
+						equal to one billion one hundred and forty million dollars; enough," he
+						adds, "to pay the public debt of Great Britain in less than five years,
+						and greatly diminish taxation forever."</p>
+
+						<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+					</div>
+				</div>
+			</div>
+
+			{{#each chaptersWithTOCIndex}}
+				<div class="bb-item" id="item{{tableOfContentIndex}}">
+					<div class="content">
+						<div class="scroller">
+							<h2>{{subtitle}}</h2>
+
+							<p>{{body}}</p>
+
+							<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+		
+		<nav>
+			<span id="bb-nav-prev">&larr;</span>
+			<span id="bb-nav-next">&rarr;</span>
+		</nav>
+
+		<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+	</div>
+
+</template>

@@ -1,0 +1,18 @@
+<template name="legendViewLayout">
+
+		<div id="backgroundOverlayFix"></div>
+		<div id="legendLayoutContainer">
+			{{>legendViewSideNav}}
+			<div class="container" style="height: 100%;">
+				<div class="row" style="height: 100%;">
+					<div class="col-sm-12" style="height: 100%;">
+						{{> errors}}
+							<!-- YIELD NEEDS <ROW> AS FIRST LINE -->
+						{{> yield}}
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+</template>

@@ -98,7 +98,8 @@
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #454e59;
-    background-color: #454e59;
+    /*background-color: #5ccdde;*/
+    background-color: #28b1c6;
 }
 
 #login-container {

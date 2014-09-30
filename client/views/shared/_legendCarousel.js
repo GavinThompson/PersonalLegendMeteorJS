@@ -1,11 +1,11 @@
-Template._homeCarousel.rendered= function() {
+Template._legendCarousel.rendered= function() {
 
 
 	console.log("Home carousel rendered")
 
 }
 
-Template._homeCarousel.helpers({ 
+Template._legendCarousel.helpers({ 
 	legends: function() {
 		return Legends.find({}, {sort: {submitted: -1}});
 	},

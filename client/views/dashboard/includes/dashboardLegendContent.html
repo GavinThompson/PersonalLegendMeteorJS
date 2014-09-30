@@ -1,0 +1,72 @@
+<template name="dashboardLegendContent">
+	<div class="legendContent">
+		
+		<div class="row tempBuffer">
+			<div class="col-xs-2">
+				<button class="btn btn-primary">
+					<i class="fa fa-clock-o"></i> Most Recent Legends
+				</button>
+			</div>
+		</div>
+	 		
+		<div id="mostRecentLegends" class="carousel slide remove-margin" data-ride="carousel">
+			
+			{{>_legendCarousel}}
+			
+			<a class="left carousel-control" href="#mostRecentLegends" data-slide="prev">‹</a>
+			<a class="right carousel-control" href="#mostRecentLegends" data-slide="next">›</a>
+	 		</div>
+			<hr/>
+		<div class="row tempBuffer">
+			<div class="col-xs-2">
+				<button class="btn btn-primary">
+					<i class="fa fa-eye"></i> Most Viewed Legends
+				</button>
+			</div>
+		</div>
+
+		<div id="mostViewedLegends" class="carousel slide remove-margin" data-ride="carousel">
+			
+			{{>_legendCarousel}}
+			
+			<a class="left carousel-control" href="#mostViewedLegends" data-slide="prev">‹</a>
+			<a class="right carousel-control" href="#mostViewedLegends" data-slide="next">›</a>
+	 		</div>
+
+			<hr/>
+		<div class="row tempBuffer">
+			<div class="col-xs-2">
+				<button class="btn btn-primary">
+					<i class="fa fa-heart-o"></i> Most Loved Legends
+				</button>
+			</div>
+		</div>
+	 		
+
+		<div id="mostLovedLegends" class="carousel slide remove-margin" data-ride="carousel">
+			
+			{{>_legendCarousel}}
+			
+			<a class="left carousel-control" href="#mostLovedLegends" data-slide="prev">‹</a>
+			<a class="right carousel-control" href="#mostLovedLegends" data-slide="next">›</a>
+	 		</div>
+
+			<hr/>
+		<div class="row tempBuffer">
+			<div class="col-xs-2">
+				<button class="btn btn-primary">
+					<i class="fa fa-share-alt"></i> Most Shared Legends
+				</button>
+			</div>
+		</div>
+	 		
+
+		<div id="mostSharedLegends" class="carousel slide remove-margin" data-ride="carousel">
+			
+			{{>_legendCarousel}}
+			
+			<a class="left carousel-control" href="#mostSharedLegends" data-slide="prev">‹</a>
+			<a class="right carousel-control" href="#mostSharedLegends" data-slide="next">›</a>
+		</div>
+	</div>
+</template>
